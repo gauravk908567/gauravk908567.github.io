@@ -3704,6 +3704,16 @@ input, select, textarea {
 			}
 
 		}
+.container {
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.container img {
+    width: 100px;
+    height: 100px;
+}
 
 /* Footer */
 
