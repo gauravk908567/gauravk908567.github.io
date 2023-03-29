@@ -20,7 +20,7 @@
         <!-- Header -->
         <!-- Note: The "styleN" class below should match that of the banner element. -->
         <header id="header" class="alt style2">
-            <a href="index.html" class="logo"><strong>Gaurav Kumar</strong> <span>Game Designer</span></a>
+            <a href="index.html" class="logo"><strong>Gaurav Kumar</strong> <span>Technical Game Designer</span></a>
             <nav>
                 <a href="#menu">Cheat Sheet</a>
             </nav>
@@ -51,7 +51,7 @@
                     <h1>FPP Horror</h1>
                 </header>
                 <div class="content">
-                    <p>This is a survival horror game set in an FPP enviroment. The protagonist has to face a series of events that always make him believe that he is being followed or watched. </p>
+                    <p>This is a short survival horror game set in an FPP enviroment, inspired from one of my favourite games Outlast. I tried to achive same level of suspense in this game. I also created an AI using Macanim system that can follow player and attack him. I wanted to learn about Unity's toolset and have an practical knowledge in implementing them. </p>
                 </div>
             </div>
         </section>
@@ -95,6 +95,7 @@
                             </header>
                             <p>
                                 <ul>
+                                    <li><span style="color:gold">The Video on the left is current iteration of the Game. For previous iteration scroll down to bottom</span></li>
                                     <li>Successfully <strong>improved game performance</strong> by 60% by <strong>modifying terrain</strong> and adjusting the <strong>field of view</strong> of the main camera.</li>
                                     <li>Implemented <strong>Unity's Occlusion Culling</strong> to improve <strong>FPS stability</strong> and loading times.</li>
                                     <li>Reduced <strong>Draw calls</strong> and improved performance through the use of <strong>Batching, occlusion, and GPU instancing techniques.</strong></li>
@@ -105,7 +106,7 @@
                                 <li><a href="https://drive.google.com/file/d/17ECZsWah1kPOfo5hhlQAzYSKiekftnLj/view?usp=share_link" class="button">Download GDD</a></li>
                             </ul>
                         </div>
-                    </div>s
+                    </div>
                 </section>
                 <section>
                     <a href="generic.html" class="image">
@@ -132,8 +133,21 @@
                         </div>
                     </div>
                 </section>
-
-
+                <!--<section id="three" class="spotlights">
+                    <section>-->
+                <!--560  315     720  405  -->
+                <!--<iframe width="720" height="405" src="https://www.youtube.com/embed/coimfoitzdm" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/jK0OkH5VSFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="content">
+                        <div class="inner">
+                            <header class="major">
+                                <h3>How the Level Design Evolved and what was added or changed</h3>
+                            </header>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </section>-->
                 <!--<section>
                         <a href="generic.html" class="image">
                             <img src="images/pic10.jpg" alt="" data-position="25% 25%" />
@@ -152,24 +166,43 @@
                     </section>
                 </section>-->
                 <!-- Three -->
-                <!--<section id="three">
-                    <div class="inner">
-                        <header class="major">
-                            <h2>Massa libero</h2>
-                        </header>
-                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button next">Get Started</a></li>
-                        </ul>
+                <section id="three">
+                    <div class="content">
+                        <div class="inner">
+                            <header class="inner">
+                                <h3><span style="font-size: 30px;">How Level Design Evolved</span></h3>
+                            </header>
+                            <header class="inner">
+                                <h1><span style="font-size: 26px;"> Video 1  | First Iteration </span></h1>
+                            </header>
+                            <p>
+                                <ul>
+                                    <li>The game was not looking good and not performing better (shown in the first video) Ambient Sound was also not giving the enviroment that feel</li>
+                                    <li>The Terrain was also not walkable at some places and had no bounds to keep the player on track. Post processing was there but needed some tweaks</li>
+                                    <li>there were large textures files on the map too and due to less clutter the game was running fine right now around 30-40 FPS</li>
+                                </ul>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jK0OkH5VSFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                                <header class="inner">
+                                    <h1><span style="font-size: 26px;"> Video 2  | Performance Tweak in Enviroment </span></h1>
+                                </header>
+                            <p>
+                                <ul>
+                                    <li>There was 15% improvement in performance after tweaking the texture size, occlusion culling, camera option setting and code optimization</li>
+                                    <li>The game was also using collision triggers only to fire up event in the game world. Timeline was not use upto this point for anything.</li>
+                                </ul>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/coImFoiTzDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </p>
+                        </div>
                     </div>
-                </section>-->
+                </section>
             </section>
 
         </div>
-        <!-- Contact -->
-        <section id="contact">
-            <div class="inner">
-                <!--<section>
+        <!-- Contact
+                                    <section id="contact">
+                                        <div class="inner">
+                                            <!--<section>
                     <form method="post" action="#">
                         <div class="fields">
                             <div class="field half">
@@ -191,49 +224,49 @@
                         </ul>
                     </form>
                 </section>-->
-                <section class="split">
-                    <section>
-                        <div class="contact-method">
-                            <!--<span class="icon solid alt fa-envelope"></span>
-                            <h3>Email</h3>
-                            <a href="#">gauravk908567@gmail.com</a>-->
-                        </div>
-                    </section>
-                    <!--<section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-phone"></span>
-                            <h3>Phone</h3>
-                            <span>(000) 000-0000 x12387</span>
-                        </div>
-                    </section>-->
-                    <!--<section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-home"></span>
-                            <h3>Address</h3>
-                            <span>1234 Somewhere Road #5432<br />
-                            Nashville, TN 00000<br />
-                            United States of America</span>
-                        </div>
-                    </section>-->
-                </section>
-            </div>
+        <section class="split">
+            <section>
+                <div class="contact-method">
+                    <!--<span class="icon solid alt fa-envelope"></span>
+                    <h3>Email</h3>
+                    <a href="#">gauravk908567@gmail.com</a>-->
+                </div>
+            </section>
+            <!--<section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-phone"></span>
+                    <h3>Phone</h3>
+                    <span>(000) 000-0000 x12387</span>
+                </div>
+            </section>-->
+            <!--<section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-home"></span>
+                    <h3>Address</h3>
+                    <span>1234 Somewhere Road #5432<br />
+                    Nashville, TN 00000<br />
+                    United States of America</span>
+                </div>
+            </section>-->
         </section>
+    </div>
+    </section>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <ul class="icons">
-                    <li><a href="mailto:gauravk908567@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/gaurav-kumar-20492818b/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/gauravk908567" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="https://www.instagram.com/ign_superman_/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; </li>
-                    <li>: <a href=""></a></li>
-                </ul>
-            </div>
-        </footer>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="mailto:gauravk908567@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://www.linkedin.com/in/gaurav-kumar-20492818b/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/gauravk908567" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.instagram.com/ign_superman_/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; </li>
+                <li>: <a href=""></a></li>
+            </ul>
+        </div>
+    </footer>
 
     </div>
 
