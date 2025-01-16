@@ -1,0 +1,727 @@
+/*
+
+Volton Template
+
+http://www.templatemo.com/tm-441-volton
+
+*/
+
+@font-face {
+    font-family: 'robotolight';
+    src: url("../fonts/Roboto-Light-webfont.eot");
+    src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url("../fonts/Roboto-Regular-webfont.eot");
+    src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url("../fonts/Roboto-Bold-webfont.eot");
+    src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+/*---------------------------------------------------------
+ 1. Reset
+-------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.blue {
+    color: #06C;
+}
+
+.green {
+    color: #090;
+}
+
+main {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+    blockquote:before,
+    blockquote:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+    outline: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+    audio:not([controls]) {
+        display: none;
+    }
+
+sub,
+sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        cursor: pointer;
+        -webkit-appearance: button;
+    }
+
+    input[type="search"] {
+        -webkit-appearance: textfield;
+    }
+
+        input[type="search"]:-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+/*---------------------------------------------------------
+ 2. Basic Style
+-------------------------------------------------------- */
+body {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
+    font-family: 'robotoregular';
+    overflow-x: hidden;
+}
+
+a {
+    color: #006699;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    text-decoration: none !important;
+}
+
+    a:hover {
+        color: #555555;
+    }
+
+h1, h2, h3, h4, h5 {
+    color: #555555;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        flex: 1 1 100%; /* 1 item per row on very small screens */
+        max-width: 100%;
+    }
+}
+
+.Projactions {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to align items in a row */
+    gap: 10px; /* Space between buttons */
+}
+
+.actions {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+    .actions li {
+        display: inline; /* Display list items inline */
+        margin-right: 10px; /* Space between buttons */
+    }
+
+.button {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 15px 30px; /* Increase padding for larger button size */
+    font-size: 18px; /* Increase font size */
+    color: white; /* Text color */
+    background-color: darkcyan; /* Button background color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+    .button:hover {
+        background-color: #008C5D; /* Darker shade on hover */
+    }
+
+.Projbutton {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 10px 20px; /* Add padding for a better button size */
+    border: 2px solid #007BFF; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* Background color */
+    color: #007BFF; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+    .Projbutton:hover {
+        background-color: #007BFF; /* Change background on hover */
+        color: #ffffff; /* Change text color on hover */
+    }
+
+.video-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: center; /* Center the videos horizontally */
+    margin-bottom: 40px; /* Space below the video container */
+}
+
+    .video-container video {
+        margin: 0 20px; /* Space between the videos */
+    }
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Wrap to the next row when items exceed the width */
+    gap: 20px; /* Optional: Add spacing between items */
+    justify-content: space-between; /* Align items with space in between */
+}
+
+.image-container {
+    position: relative;
+    flex: 1 1 calc(25% - 20px); /* Make each item 25% width minus the gap */
+    max-width: calc(25% - 20px); /* Ensure items don’t exceed this width */
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap to the next row after 4 items */
+    gap: 20px; /* Space between items */
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.certificate-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: contain; /* Ensures the logo scales properly */
+}
+
+.certificate-item {
+    display: flex;
+    align-items: center;
+    width: calc(33.33% - 20px); /* 3 items per row */
+    box-sizing: border-box;
+}
+
+.skill-image {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+.proj-image {
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin: 5px; /* Add some spacing between images */
+}
+
+.proj-image-container {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: space-between; /* Space out images evenly */
+    max-width: 800px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.text-overlay {
+    position: absolute; /* Position relative to the container */
+    top: 50%; /* Adjust the vertical position */
+    left: 50%; /* Adjust the horizontal position */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color for contrast */
+    /*background-color: rgba(0, 0, 0);*/ /* Semi-transparent background */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 18px; /* Adjust text size as needed */
+    text-align: center; /* Center align text */
+}
+
+.tiles article .link.primary {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+.paragraph-style {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #999999;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #999999;
+}
+
+:-ms-input-placeholder {
+    color: #999999;
+}
+
+.main-content,
+.banner-bg {
+    float: right;
+    width: 77%;
+}
+
+@media screen and (max-width: 1290px) {
+    .main-content,
+    .banner-bg {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-content,
+    .banner-bg {
+        width: 100%;
+    }
+}
+
+.content-wrapper {
+    padding: 0 80px;
+}
+
+@media screen and (max-width: 992px) {
+    .content-wrapper {
+        padding: 0 30px;
+    }
+}
+
+h4.widget-title {
+    font-size: 24px;
+    font-family: 'robotobold';
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+hr {
+    position: relative;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    height: 4px;
+    background: #dddddd;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.page-section {
+    padding-top: 80px;
+}
+
+/*---------------------------------------------------------
+ 3. Header
+-------------------------------------------------------- */
+.sidebar-menu {
+    float: left;
+    width: 23%;
+    height: 100%;
+    position: fixed;
+    background-color: #5f6d7e;
+    color: white;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 1290px) {
+    .sidebar-menu {
+        overflow-y: scroll;
+        width: 30%;
+    }
+}
+
+.top-section {
+    padding: 40px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border: 4px solid white;
+    -webkit-border-radius: 75px;
+    border-radius: 75px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+    .profile-image img {
+        width: 104%;
+        height: 100%;
+    }
+
+h3.profile-title {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 24px;
+    font-family: 'robotobold';
+}
+
+.main-navigation {
+    margin: 10px;
+}
+
+    .main-navigation li {
+        display: block;
+    }
+
+        .main-navigation li a {
+            padding: 15px 40px;
+            display: block;
+            color: white;
+            font-size: 14px;
+        }
+
+            .main-navigation li a i {
+                margin-right: 15px;
+                font-size: 24px;
+            }
+
+            .main-navigation li a:hover {
+                background: #5b6878;
+            }
+
+            .main-navigation li a.active {
+                background: #495461;
+            }
+
+                .main-navigation li a.active:hover {
+                    background: #495461;
+                }
+
+.social-icons {
+    display: block;
+    padding: 30px 50px;
+}
+
+    .social-icons li {
+        display: inline-block;
+        margin-right: 24px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+        color: white;
+    }
+
+        .social-icons a:hover {
+            color: #282e35;
+        }
+
+.responsive-header {
+    background: #5f6d7e;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .responsive-header .main-navigation {
+        margin-top: 10px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .responsive-header p {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .responsive-header .profile-image {
+        float: left;
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-right: 30px;
+    }
+
+    .responsive-header .profile-content {
+        text-align: left;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .top-section {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-navigation a {
+        padding: 10px;
+    }
+
+        .main-navigation a.active {
+            background: #5f6d7e !important;
+        }
+
+        .main-navigation a:hover {
+            background: #5f6d7e !important;
+        }
+}
+
+.toggle-menu {
+    width: 100%;
+    display: block;
+    padding: 20px;
+    margin-top: 30px;
+    background: #6cc0f7;
+    color: white;
+    font-size: 18px;
+}
+
+    .toggle-menu:hover {
+        color: white;
+    }
+
+/*---------------------------------------------------------
+ 4. Main Content
+-------------------------------------------------------- */
+/*------ banner ------ */
+.banner-bg {
+    padding: 260px 80px;
+    position: relative;
+    background: url("../img/8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(95, 109, 126, 0.4);
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.welcome-text {
+    position: relative;
+    z-index: 4;
+}
+
+    .welcome-text h2 {
+        font-size: 42px;
+        font-family: 'robotobold';
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .welcome-text h5 {
+        font-size: 22px;
+        color: white;
+    }
+
+/*------ about us ------ */
+.about-image {
+    overflow: hidden;
+    border: 4px solid #dddddd;
+    margin-bottom: 40px;
+}
+
+    .about-image img {
+        width: 100%;
+        display: block;
+    }
+
+/*------ projects ------ */
+.project-item {
+    position: relative;
+    overflow: hidden;
+    margin: 25px 0;
+}
+
+    .project-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.project-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover .project-hover {
+    opacity: 1;
+}
+
+.project-hover .inside {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+}
+/*------ contact ------ */
+.contact-form {
+    margin-top: 40px;
+}
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        outline: 0;
+        border: 1px solid #aaaaaa;
+        padding: 12px;
+        color: #999999;
+        margin-bottom: 30px;
+    }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: 0;
+        }
+
+    .contact-form .button {
+        width: auto;
+        background: #5f6d7e;
+        color: white;
+        text-transform: uppercase;
+        border: 0;
+    }
+
+/*---------------------------------------------------------
+ 5. Footer
+-------------------------------------------------------- */
+#footer p.copyright-text {
+    margin: 40px 0;
+    font-size: 13px;
+}
+
+    #footer p.copyright-text a {
+        color: #5f6d7e;
+    }
+
+        #footer p.copyright-text a:hover {
+            color: #6cc0f7;
+        }

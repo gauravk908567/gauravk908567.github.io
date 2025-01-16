@@ -1,12 +1,11 @@
-<!DOCTYPE HTML>
-<!--
-    Forty by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-802G39EQ2E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,245 +14,157 @@
 
         gtag('config', 'G-802G39EQ2E');
     </script>
-    <title>Furry Escape</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gaurav Kumar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body class="is-preload">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <!-- Note: The "styleN" class below should match that of the banner element. -->
-        <header id="header" class="alt style2">
-            <a href="index.html" class="logo"><strong>Gaurav Kumar</strong> <span>Technical Project Manager</span></a>
-            <nav>
-                <a href="#menu">Cheat Sheet</a>
-            </nav>
-        </header>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="landing.html">Projects</a></li>
-                <li><a href="https://drive.google.com/file/d/1hu3J7gwnFJtczZDdsDqNP3vcyCvMN_aD/view?usp=share_link">CV</a></li>
-                <li><a href="generic.html">Contact</a></li>
-            </ul>
-            <ul class="actions stacked">
-                <!--<li><a href="#" class="button primary fit">Get Started</a></li>
-                <li><a href="#" class="button fit">Log In</a></li>-->
-            </ul>
-        </nav>
-
-        <!-- Banner -->
-        <!-- Note: The "styleN" class below should match that of the header element. -->
-        <section id="banner" class="style2">
-            <div class="inner">
-                <span class="image">
-                    <img src="images/pic07.jpg" alt="" />
-                </span>
-                <header class="major">
-                    <h1>Furry Escape</h1>
-                </header>
-                <div class="content">
-                    <p>It's a 2d platformer game that was meant to create an challenging yet fun HyperCasual game and Publish it on <a href="https://play.google.com/store/apps/details?id=com.FallinginReverse.FurryEscape" style="color:cyan">Android platform</a> and <a href="https://gauravk908567.itch.io/furry-escape" style="color:cyan">Itch.io</a>. This was my first ever WebGL game and helped me learning about Unity 2D and WebGl game deployment. It was also fun to create different platforms with different behaviours. It also uses Player Prefs to save your highscore</p>
+<body>
+    <div class="responsive-header visible-xs visible-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-section">
+                        <div class="profile-image">
+                            <img src="img/profile.jpg" alt="Gaurav Kumar">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-title">Gaurav Kumar</h3>
+                            <p class="profile-description">| Scrum Master | CAPM | GAME DESIGN | GAME PRODUCTION | GAME DIRECTION |</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Main -->
-        <div id="main">
-
-            <!-- One -->
-            <section id="one">
-                <div class="inner">
-                    <header class="major">
-                        <h2>Objectives of this project</h2>
-                    </header>
-                    <p>
-                        The main objectives of this project were
-                        <ul>
-                            <li>Using <strong><span style="color:gold">Player prefs</span></strong> to save game state and score.</li>
-                            <li>Implemented <strong><span style="color:gold">Infinite scrolling</span></strong> using <strong><span style="color:gold">Parallax scrolling</span></strong> for the <strong><span style="color:gold">scrolling effect</span></strong>.</li>
-                            <li>Designed and created simple but visually appealing <strong><span style="color:gold">Game assets</span></strong> and <strong><span style="color:gold">Environment</span></strong> using <strong><span style="color:gold">Adobe Photoshop</span></strong> and <strong><span style="color:gold">Illustrator.</span></strong></li>
-                            <li>Developed engaging and <strong><span style="color:gold">Challenging Game mechanics</span></strong>, such as <strong><span style="color:gold">Character Movement</span></strong> and <strong><span style="color:gold">Platform Interactions</span></strong> by utilizing <strong><span style="color:gold">Unity's 2D Physics Engine</span></strong> and custom scripts.</li>
-                            <li>Implemented <strong><span style="color:gold">Unique platform interactions</span></strong>, such as <strong><span style="color:gold">Breaking of platform</span></strong> after <strong><span style="color:gold">Player Collision</span></strong> in few seconds, <strong><span style="color:gold">pushing players</span></strong> on the <strong><span style="color:gold">side indicated</span></strong> on the platform and <strong><span style="color:gold">following player movement</span></strong> tricking him to die to spike, using <strong><span style="color:gold">Unity's 2D tools</span></strong> and custom scripts, which added more depth to the gameplay.</li>
-                            <li><strong><span style="color:gold">Published</span></strong> the game on <strong><span style="color:gold">playstore</span></strong> and <strong><span style="color:gold">itch.io</span></strong> by creating a <strong><span style="color:gold">android and Webgl build</span></strong>.</li>
-                            <li>Used <strong><span style="color:gold">Unity's C#</span></strong> to develop the game, while also utilizing <strong><span style="color:gold">Version control system (Github)</span></strong> to keep track of the progress of the game as a solo developer.</li>
-                        </ul>
-                    </p>
-                </div>
-            </section>
-
-            <!-- Two -->
-            <section id="two" class="spotlights">
-                <section>
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/pSE8In_-llQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <div class="content">
-                        <div class="inner">
-                            <header class="major">
-                                <h3>Game Development and Implementation</h3>
-                            </header>
-                            <p>
-                                <ul>
-                                    <li>Implemented <strong><span style="color:gold">Infinite scrolling</span></strong> using <strong><span style="color:gold">Quad</span></strong> for the <strong><span style="color:gold">scrolling effect</span></strong>.</li>
-                                    <li>Developed <strong><span style="color:gold">Engaging</span></strong> and <strong><span style="color:gold">Challenging Game Mechanics</span></strong>, such as <strong><span style="color:gold">Character Movement</span></strong> and basic platform interactions by utilizing <strong><span style="color:gold">Unity's 2D Physics Engine</span></strong> and custom scripts</li>
-                                    <li>Used Unity's C# to develop the game, while also utilizing <strong><span style="color:gold">Version control system (Github)</span></strong> to keep track of the version of the game and keep <strong><span style="color:gold">previous iteration accessible.</span></strong></li>
-                                    <li>Implemented a <strong><span style="color:gold">Main menu</span></strong> using <strong><span style="color:gold">Unity's UI button system</span></strong> to allow players to load into the game scene.</li>
-                                </ul>
-                            </p>
-                            <ul class="actions">
-                                <li><a href="https://drive.google.com/file/d/1sqBLJDEcDPK3akBdrPhA9ScXKrF9cW5v/view?usp=share_link" class="button">Download GDD</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <a href="generic.html" class="image">
-                        <img src="images/pic09.png" alt="" data-position="top center" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <header class="major">
-                                <h3>Unique Platform Interactions</h3>
-                            </header>
-                            <p>
-                                <ul>
-                                    Implemented unique Platform interactions, such as
-                                    <li>Implemented <strong><span style="color:gold">Breaking of platform</span></strong> after <strong><span style="color:gold">Player collision</span></strong> in few seconds, which added a <strong><span style="color:gold">level of Unpredictability</span></strong> to the <strong><span style="color:gold">Gameplay</span></strong> and <strong><span style="color:gold">challenged players</span></strong> to <strong><span style="color:gold">adapt</span></strong> their <strong><span style="color:gold">strategies.</span></strong></li>
-                                    <li>Implemented <strong><span style="color:gold">Pushing players</span></strong> on the <strong><span style="color:gold">side indicated</span></strong> on the platform to add an additional <strong><span style="color:gold">layer of challenge</span></strong> and require players to <strong><span style="color:gold">pay attention</span></strong> to their <strong><span style="color:gold">surroundings</span></strong> and base thier strategies on that.</li>
-                                    <li>Implemented <strong><span style="color:gold">Following player movement</span></strong> tricking him to dying to spike, which added a <strong><span style="color:gold">level of tension</span></strong> and <strong><span style="color:gold">increased</span></strong> the <strong><span style="color:gold">difficulty</span></strong> of the game.</li>
-                                </ul>
-                            </p>
-                            <ul class="actions">
-                                <li><a href="https://gauravk908567.itch.io/furry-escape" class="button">Play on Itch.io</a></li>
-                                <li><a href="https://play.google.com/store/apps/details?id=com.FallinginReverse.FurryEscape" class="button"> Download from Playstore</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <a href="generic.html" class="image">
-                        <img src="images/pic10.png" alt="" data-position="25% 25%" />
-                    </a>
-                    <div class="content">
-                        <div class="inner">
-                            <header class="major">
-                                <h3>Game Asset and Environment Design</h3>
-                            </header>
-                            <p>
-                                <ul>
-                                    <li><strong><span style="color:gold">Designed</span></strong> and created simple but visually appealing <strong><span style="color:gold">Game Assets</span></strong> and <strong><span style="color:gold">environment</span></strong> using <strong><span style="color:gold">Adobe Photoshop</span></strong> and <strong><span style="color:gold">Illustrator</span></strong></li>
-                                    <li><strong><span style="color:gold">Published</span></strong> the game on <strong><span style="color:gold">playstore</span></strong> and <strong><span style="color:gold">itch.io</span></strong> by creating a <strong><span style="color:gold">Android and Webgl build</span></strong>.</li>
-                                </ul>
-                            </p>
-                            <ul class="actions">
-                                <li><a href="https://github.com/gauravk908567/HyperCasual" class="button">Check it on GitHub</a></li>
-                                <li><a href="landing3.html" class="button">Next Project</a></li>
-                                <li><a href="landing1.html" class="button">Previous Project</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <!-- Three -->
-            <!--<section id="three">
-                    <div class="inner">
-                        <header class="major">
-                            <h2>Massa libero</h2>
-                        </header>
-                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button next">Get Started</a></li>
-                        </ul>
-                    </div>
-                </section>-->
-
+            <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+            <div class="main-navigation responsive-menu">
+                <ul class="navigation">
+                    <li><a href="index.html"><i class="fa fa-ghost"></i>About Me</a></li>
+                    <li><a href="index.html"><i class="fa fa-user"></i>Skills</a></li>
+                    <li><a href="index.html"><i class="fa fa-user"></i>Certificates</a></li>
+                    <li><a href="index.html"><i class="fa fa-user"></i>Experience</a></li>
+                    <li><a href="index.html"><i class="fa fa-newspaper-o"></i>Projects</a></li>
+                    <li><a href="index.html"><i class="fa fa-envelope"></i>Contact Me</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- Contact -->
-        <section id="contact">
-            <div class="inner">
-                <!--<section>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" />
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="6"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Clear" /></li>
-                        </ul>
-                    </form>
-                </section>-->
-                <section class="split">
-                    <section>
-                        <div class="contact-method">
-                            <!--<span class="icon solid alt fa-envelope"></span>
-                            <h3>Email</h3>
-                            <a href="#">gauravk908567@gmail.com</a>-->
-                        </div>
-                    </section>
-                    <!--<section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-phone"></span>
-                            <h3>Phone</h3>
-                            <span>(000) 000-0000 x12387</span>
-                        </div>
-                    </section>-->
-                    <!--<section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-home"></span>
-                            <h3>Address</h3>
-                            <span>1234 Somewhere Road #5432<br />
-                            Nashville, TN 00000<br />
-                            United States of America</span>
-                        </div>
-                    </section>-->
-                </section>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <ul class="icons">
-                    <li><a href="mailto:gauravk908567@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/gaurav-kumar-20492818b/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/gauravk908567" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="https://www.instagram.com/ign_superman_/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; </li>
-                    <li>: <a href=""></a></li>
-                </ul>
-            </div>
-        </footer>
-
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- SIDEBAR -->
+    <div class="sidebar-menu hidden-xs hidden-sm">
+        <div class="top-section">
+            <div class="profile-image">
+                <img src="img/profile.jpg" alt="Gaurav Kumar">
+            </div>
+            <h3 class="profile-title">Gaurav Kumar</h3>
+            <p class="profile-description">| CAPM | Scrum Master | Game Design | Game Production | Game Direction |</p>
+        </div> <!-- top-section -->
+        <div class="main-navigation">
+            <ul class="navigation">
+                <li><a href="index.html"><i class="fa fa-bolt"></i>About Me</a></li>
+                <li><a href="index.html"><i class="fa fa-star"></i>Skills</a></li>
+                <li><a href="index.html"><i class="fa fa-trophy"></i>Certificates</a></li>
+                <li><a href="index.html"><i class="fa fa-briefcase"></i>Experience</a></li>
+                <li><a href="index.html"><i class="fa fa-gamepad"></i>Projects</a></li>
+                <li><a href="index.html"><i class="fa fa-link"></i>Contact Me</a></li>
+            </ul>
+        </div> <!-- .main-navigation -->
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/gaurav-kumar-20492818b/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/gauravk908567?tab=repositories"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div> <!-- .social-icons -->
+    </div> <!-- .sidebar-menu -->
+    <!-- Banner -->
+    <!-- Note: The "styleN" class below should match that of the header element. -->
+    <div class="main-content">
+        <div class="fluid-container">
+            <div class="content-wrapper">
+
+                <!-- Project Overview -->
+                <div class="page-section" id="project-overview">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">FPS Multiplayer Game</h4>
+                            <span style="font-size:18px;">
+                                <p>
+                                    This FPS Multiplayer Game is a solo project that merges the nostalgic elements of "Bomberman" with the fast-paced action of the FPS genre. My goal is to master the Photon Engine and create an engaging multiplayer experience that allows players to connect seamlessly.
+                                </p>
+                            </span>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objectives -->
+                <div class="page-section" id="objectives">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Objectives of the Project:</h4>
+                            <!--<video width="640" height="360" controls muted; style="margin-bottom:100px;">
+                                <source src="video/Fpp_lvlover.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>-->
+                            <iframe width="720" height="405" src="https://www.youtube.com/embed/fl5E0qeQteQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <div style="margin-bottom: 40px;"></div>
+                            <span style="font-size:18px;">
+                                <li><b>Mastering the Photon Engine:</b> Learn and implement the Photon Engine for effective multiplayer lobby management, enabling players to join, create, find, and leave rooms effortlessly.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Robust Error Handling:</b> Enhance user experience by implementing comprehensive error handling for room creation failures, designing intuitive menus for each lobby action.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Dynamic Level Design:</b> Create levels with various templates, randomly selected each time a game is played, using the Fisher-Yates shuffle method for unique experiences.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Player Control Synchronization:</b> Develop responsive player controls synchronized across the server, implementing callbacks to reflect real-time changes.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Item Development:</b> Introduce a grenade item as part of gameplay mechanics, with plans to expand item offerings in future updates.</li>
+                            </span>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-section" id="level-design-evolution">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title"></h4>
+                            <div style="margin-bottom: 20px;"></div>
+                            <div span style="font-size:18px;">
+                                <header class="inner">
+                                    <h4 style="margin-top: 60px;"><span style="font-size: 24px;"><b>GAME DEVELOPMENT AND MECHANICS FOCUS:</b></span></h4>
+                                </header>
+                                <div style="margin-top: 20px; margin-bottom:20px;">
+                                    <li><b>Dynamic Level Design:</b> Created levels that utilize different templates, chosen at random using the Fisher-Yates shuffle method.</li>
+                                    <div style="margin-top: 20px; margin-bottom:20px;">
+                                        <li><b>Player Control Synchronization:</b> Developed and synchronized player controls across the server for real-time gameplay.</li>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-bottom:20px;">
+                                        <li><b>Item Development:</b> Introduced a grenade item, marking the beginning of item development with plans for further expansions.</li>
+                                    </div>
+                                    <hr />
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><a href="landing.html" class="button">Previous Project</a></li>
+                                <li><a href="landing4.html" class="button">Next Project</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scripts -->
+                <script src="assets/js/jquery.min.js"></script>
+                <script src="assets/js/jquery.scrolly.min.js"></script>
+                <script src="assets/js/jquery.scrollex.min.js"></script>
+                <script src="assets/js/browser.min.js"></script>
+                <script src="assets/js/breakpoints.min.js"></script>
+                <script src="assets/js/util.js"></script>
+                <script src="assets/js/main.js"></script>
 
 </body>
 </html>
