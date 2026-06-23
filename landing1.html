@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/templatemo-style.css?v=5">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -93,12 +93,101 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title">Planet of Twins</h4>
+
+                            <!-- Production context: the producer's lead -->
+                            <div class="prod-card">
+                                <div class="prod-grid">
+                                    <div class="prod-item">
+                                        <span class="prod-label">My Role</span>
+                                        <span class="prod-value">Producer, Developer &amp; Designer</span>
+                                    </div>
+                                    <div class="prod-item">
+                                        <span class="prod-label">Team</span>
+                                        <span class="prod-value">Two people</span>
+                                    </div>
+                                    <div class="prod-item">
+                                        <span class="prod-label">Status</span>
+                                        <span class="prod-value"><span class="status-pill status-dev">In Active Development</span></span>
+                                    </div>
+                                    <div class="prod-item">
+                                        <span class="prod-label">Platform</span>
+                                        <span class="prod-value">PC</span>
+                                    </div>
+                                    <div class="prod-item">
+                                        <span class="prod-label">Engine</span>
+                                        <span class="prod-value">Unity 6 · URP · C#</span>
+                                    </div>
+                                    <div class="prod-item">
+                                        <span class="prod-label">Timeline</span>
+                                        <span class="prod-value">Oct 2023 &ndash; Present</span>
+                                    </div>
+                                </div>
+                            </div>
+
                             <span style="font-size:18px;">
                                 <p>
-                                    Planet of Twins is a single-player action-adventure game set in the enchanting world of Elysia, where every being exists in pairs, embodying the delicate balance between light and shadow. Players embark on an epic journey with two brothers, Lyra and Kai, as they strive to restore harmony to their planet and prevent it from succumbing to the curse of separation.
+                                    Planet of Twins is an original single-player action-adventure game, inspired by Binary Land on the NES. You control two twins at once, Kai and Lyra, and they have to stay close to survive. The further apart they drift, the faster their shared health drains. Every system in the game is built around that one bond.
                                 </p>
-                                <video width="440" height="280" controls muted>
-                                    <source src="video/pot_gameplay.mp4" type="video/mp4">
+                                <p>
+                                    This is the project where every part of my background meets. I own the roadmap, run the sprints, do the playtesting, and track the KPIs end to end. I also build it: the systems below are ones I designed and wrote myself. I am the producer, the developer, and the player who cares about whether the game actually feels right.
+                                </p>
+                            </span>
+
+                            <!-- Hero screenshot carousel -->
+                            <div class="pf-carousel" data-autoplay="4500" aria-label="Planet of Twins screenshots">
+                                <div class="pf-viewport">
+                                    <div class="pf-track">
+                                        <div class="pf-slide"><img src="img/pot_sky.png" alt="Planet of Twins world"></div>
+                                        <div class="pf-slide"><img src="img/pot_lvl.png" alt="Planet of Twins level"></div>
+                                        <div class="pf-slide"><img src="img/pot_cmpr.png" alt="Planet of Twins comparison"></div>
+                                        <div class="pf-slide"><img src="img/pot_nfg.png" alt="Planet of Twins scene"></div>
+                                        <div class="pf-slide"><img src="img/pot_fr.png" alt="Planet of Twins scene"></div>
+                                    </div>
+                                </div>
+                                <button class="pf-prev" aria-label="Previous">&lsaquo;</button>
+                                <button class="pf-next" aria-label="Next">&rsaquo;</button>
+                            </div>
+
+                            <p style="font-size:18px; margin-top:10px;">A look at the game in motion:</p>
+                            <video width="440" height="280" controls muted>
+                                <source src="video/pot_gameplay.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Production approach -->
+                <div class="page-section" id="production">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">How I Run It</h4>
+                            <div style="font-size:18px; margin-bottom:40px;">
+                                <li><b>Full production ownership:</b> I define the scope, build the roadmap, plan every sprint, break down the tasks, and track milestones across the project.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Playtest-driven iteration:</b> I ran a structured <b>13-player playtest</b>, collected behavioural and qualitative data on player flow, ability comprehension, and pacing, identified <b>4 critical friction points</b>, and designed a targeted fix for each before committing development time.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Business case:</b> I built a formal Business Case and investment pitch covering the unique mechanics, market positioning, MSP, and a roadmap toward a funded vertical slice.</li>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core mechanic -->
+                <div class="page-section" id="core-mechanic">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">The Core: One Player, Two Twins</h4>
+                            <span style="font-size:18px;">
+                                <span class="sys-tag">System I built</span>
+                                <li><b>Dual-character control:</b> The player moves both twins together and switches which one is active for abilities. I built the input layer, the selection system, and the mirrored-movement handling so two characters read as one connected unit.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Proximity-based shared health:</b> Both twins draw from a single health pool, and the distance between them drains it on a tuned curve. This is the tension the whole game runs on, so I built the distance calculation, the drain zones, and the upgrade-aware modifiers from the ground up.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <video width="640" height="360" controls muted style="margin-bottom:20px; margin-top:20px;">
+                                    <source src="video/pot_movemnt.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </span>
@@ -107,111 +196,91 @@
                     </div>
                 </div>
 
-                <!-- Objectives -->
-                <div class="page-section" id="objectives">
+                <!-- Enemy AI -->
+                <div class="page-section" id="enemy-ai">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Engaging Narrative and World-Building</h4>
-                            <!--<video width="640" height="360" controls muted; style="margin-bottom:100px;">
-                                <source src="video/Fpp_lvlover.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>-->
+                            <h4 class="widget-title">Enemy AI: A Hybrid Brain Per Enemy</h4>
                             <span style="font-size:18px;">
-                                <li><b>Rich Lore:</b> The game unfolds in a world torn apart by the eternal war between the Solari, masters of radiant energy, and the Tenebris, wielders of shadow. The Celestial Accord, proposed by the Eternal Ones, binds every soul as a Duality Pair, creating a delicate balance that players must navigate.</li>
+                                <span class="sys-tag">System I designed and wrote</span>
+                                <li><b>GOAP + Behaviour Tree + FSM:</b> Each enemy type runs its own brain. A goal-oriented planner sits on top and decides what to do, then hands execution down to a behaviour tree or state machine. This is the system I am proudest of, and it is the clearest proof of how I think about problems.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <li><b>Character-Driven Story:</b> Players witness the Day of Convergence, where Lyra and Kai's playful moment is shattered by chaos. Their journey is not just about overcoming external threats but also about personal growth and the struggle to maintain their bond amidst the looming darkness.</li>
+                                <li><b>An emergent enemy ecology:</b> On top of the per-enemy brains I built shared systems for mood, social bonds between enemies, points of interest, and a faction-energy resource. Enemies even fight <i>each other</i> through a clan-war behaviour when no twin is nearby.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <div class="video-container">
-                                    <video width="440" height="280" controls muted>
-                                        <source src="video/pot_level.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <video width="440" height="280" controls muted>
-                                        <source src="video/pot_leveloverview.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
+                                <li><b>Built on a reusable framework:</b> The decision systems share a blackboard and a service locator, so the AI is decoupled and reusable rather than hard-wired to this one game.</li>
                             </span>
-                            <!--<iframe src="doc/StoryPOT.pdf" width="60%" height="60%" style="border: solid;"></iframe>
-                            <div style="margin-bottom: 500px;"></div>-->
+                            <hr>
                         </div>
                     </div>
                 </div>
-                <div class="page-section" id="level-design-evolution">
+
+                <!-- Story & cinematics -->
+                <div class="page-section" id="story">
                     <div class="row">
                         <div class="col-md-12">
-                            <hr
+                            <h4 class="widget-title">Story, World &amp; Cinematics</h4>
+                            <span style="font-size:18px;">
+                                <li><b>The premise:</b> The twins are torn apart when the villain inverts an ancient curse. Where it once bound twins together, the planet now pulls them apart, and the corrupted people around them become the enemies. The twins fight their way back to restore the bond. Defeated enemies were once neighbours, so their freed souls power the twins, and the kills are framed as grief rather than triumph.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>I wrote the narrative and built the cinematics</b> using Unity's Cinemachine across the key story beats, including an intro sequence that teaches the twin relationship through an in-world catastrophe instead of a tutorial prompt.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <!-- Story / world video carousel -->
+                                <div class="pf-carousel" aria-label="Story and world videos">
+                                    <div class="pf-viewport">
+                                        <div class="pf-track">
+                                            <div class="pf-slide">
+                                                <video controls muted>
+                                                    <source src="video/pot_introscene.mp4" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+                                            <div class="pf-slide">
+                                                <video controls muted>
+                                                    <source src="video/pot_level.mp4" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+                                            <div class="pf-slide">
+                                                <video controls muted>
+                                                    <source src="video/pot_leveloverview.mp4" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="pf-prev" aria-label="Previous">&lsaquo;</button>
+                                    <button class="pf-next" aria-label="Next">&rsaquo;</button>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-section" id="abilities">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr>
                             <div style="margin-bottom: 40px;"></div>
-                            <h4 class="widget-title">Unique Gameplay Mechanics</h4>
+                            <h4 class="widget-title">Abilities &amp; Rescue Tension</h4>
                             <div style="margin-bottom: 40px;"></div>
-                            <div span style="font-size:18px; margin-bottom:80px;">
-                                <li><b>Dual-Character Control:</b> Players control both Lyra and Kai, Requiring them to work together to solve challenges in a dynamic environment. The gameplay emphasizes cooperation, as both characters must reach their objectives together to advance.</li>
+                            <div style="font-size:18px; margin-bottom:40px;">
+                                <span class="sys-tag">System I built</span>
+                                <li><b>Weaver's Gate, the rescue ability:</b> When one twin is downed or trapped, the player has to save them before a countdown runs out. The free twin opens a gate and a soul crosses to the dying twin, and the player mashes to complete the rescue against the clock. I built the whole rescue state machine, the soul travel, and the failure conditions. It is the moment the proximity bond pays off under real pressure.</li>
                                 <div style="margin-bottom: 40px;"></div>
-                                <li>
-                                    <b>Proximity-Based Health System:</b> The health of both characters is directly tied to their distance from one another. As they separate, their health diminishes, creating a constant tension that encourages teamwork and strategic positioning.
-                                </li>
-                                <video width="640" height="360" controls muted; style="margin-bottom:40px; margin-top:40px;">
-                                    <source src="video/pot_movemnt.mp4" type="video/mp4">
+                                <video width="640" height="360" controls muted style="margin-bottom:40px; margin-top:20px;">
+                                    <source src="video/pot_ghost.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
+                                <li><b>Character progression:</b> Both twins gain abilities through a skill tree as the player progresses, which feed into both puzzle-solving and combat. The unlocks, the points, and the upgrade-aware tuning all run through systems I wrote.</li>
                                 <hr />
                                 <header class="inner">
-                                    <h3 style="margin-top: 60px;"><span style="font-size: 24px;">Innovative Abilities and Character Evolution</span></h3>
+                                    <h4 style="margin-top: 40px;"><span style="font-size: 24px;">Production Artefacts</span></h4>
                                 </header>
                                 <div style="margin-top: 40px; margin-bottom:40px;">
-                                    <li><b>Weaver’s gate:</b> This powerful ability allows the twins to harness the universe's energy to assist each other in critical moments, enhancing tactical gameplay. It becomes essential when one character is trapped or under attack.</li>
-                                    <div style="margin-top: 40px; margin-bottom:40px;">
-                                        <video width="640" height="360" controls muted; style="margin-bottom:40px; margin-top:40px;">
-                                            <source src="video/pot_ghost.mp4" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <li><b>Character Progression:</b> As players progress, Lyra and Kai evolve, gaining passive abilities that reflect their clan heritage. These abilities not only aid in puzzle-solving but also enhance their combat effectiveness against increasingly formidable foes.</li>
-                                    </div>
-                                    <hr />
-                                    <header class="inner">
-                                        <h4 style="margin-top: 40px;"><span style="font-size: 24px;">Cinematic Presentation and Immersion</span></h4>
-                                        <div style="margin-top: 40px; margin-bottom:40px;">
-                                            <li><b>Cinematic Storytelling:</b> Utilizing Unity's Cinemachine, the game features a captivating introductory scene that immerses players in the lore of Elysia. The narrative unfolds as players witness the Day of Convergence, a celebration that quickly turns to chaos when a fissure erupts, threatening the delicate balance of their world.</li>
-                                            <div style="margin-bottom: 40px;"></div>
-                                            <li><b>Environmental Design:</b> The shattering environment is not just a backdrop but an integral part of the gameplay, with dynamic elements that respond to player actions and decisions, creating a living, breathing world.</li>
-                                            <video width="640" height="360" controls muted; style="margin-bottom:40px; margin-top:40px;">
-                                                <source src="video/pot_introscene.mp4" type="video/mp4">
-                                                Your browser does not support the video tag.
-                                            </video>
-                                        </div>
-                                    </header>
-                                    <hr />
-                                    <header class="inner">
-                                        <h4 style="margin-top: 40px;"><span style="font-size: 24px;">Future expansions: Thematic Depth and Conflict</span></h4>
-                                        <div style="margin-top: 40px; margin-bottom:40px;">
-                                            <li><b>Conflict with Erebos:</b> The introduction of Erebos, the embodiment of Ananke, adds complexity to the narrative. His manipulations threaten the balance of Elysia, forcing players to confront both external enemies and their own inner struggles, enriching the story and gameplay.</li>
-                                            <div style="margin-bottom: 40px;"></div>
-                                            <li><b>Exploration of Duality:</b> The game’s core theme of duality—light versus shadow, coordination versus separation—provides a philosophical underpinning that resonates with players, making the experience more meaningful.</li>
-                                            <img src="img/POTFuture.png" alt="assets" class="proj-image">
-                                        </div>
-                                    </header>
-                                    <hr />
-                                    <header class="inner">
-                                        <h4 style="margin-top: 40px;"><span style="font-size: 24px;">Project Status and Future Development</span></h4>
-                                        <div style="margin-top: 40px; margin-bottom:40px;">
-                                            <li><b>Investment Potential:</b> Planet of Twins was developed as a pitch for investment, showcasing its innovative mechanics and rich narrative potential. Further development is needed to create a vertical slice of the product, which requires additional funding.</li>
-                                            <div style="margin-bottom: 40px;"></div>
-                                            <li><b>Market Appeal:</b> With its unique gameplay, compelling story, and cooperative mechanics, "Planet of Twins" has the potential to attract a diverse audience, appealing to fans of both puzzle-solving and narrative-driven games.</li>
-                                            <img src="img/POTDevPlan.png" alt="assets" class="proj-image">
-                                            <img src="img/POTRoadmap.png" alt="assets" class="proj-image">
-                                        </div>
-                                    </header>
-                                    <hr />
-                                    <header class="inner">
-                                        <h4 style="margin-top: 40px;"><span style="font-size: 24px;"><b>Game Pitch, Game Story and Game level snapshots</b></span></h4>
-                                        <div class="proj-image-container" style="margin-top: 40px; margin-bottom: 40px;">
-                                            <img src="img/pot_cmpr.png" alt="assets" class="proj-image">
-                                            <img src="img/pot_sky.png" alt="assets" class="proj-image">
-                                            <img src="img/pot_nfg.png" alt="assets" class="proj-image">
-                                            <img src="img/pot_lvl.png" alt="assets" class="proj-image">
-                                            <img src="img/pot_fr.png" alt="assets" class="proj-image">
-                                        </div>
-                                    </header>
+                                    <li>Planet of Twins is built as a fundable product, not just a demo. Below are the development plan, roadmap, and a look ahead at planned expansions, the kind of artefacts a producer is judged on.</li>
+                                    <div style="margin-bottom: 40px;"></div>
+                                    <img src="img/POTDevPlan.png" alt="Development plan" class="proj-image">
+                                    <img src="img/POTRoadmap.png" alt="Roadmap" class="proj-image">
+                                    <img src="img/POTFuture.png" alt="Planned expansions" class="proj-image">
                                 </div>
                             </div>
                             <hr />
@@ -220,22 +289,14 @@
                     <ul class="actions">
                         <li><a href="https://docs.google.com/presentation/d/1aXiFjnUHK1LqrNhfbvprZcQ42k3Ucwmz/edit?usp=sharing&ouid=116115334140855017777&rtpof=true&sd=true" class="button">View Game Pitch</a></li>
                         <li><a href="https://drive.google.com/file/d/1M254QjIj0JbmKfZp1d5KN7R4cHNhdQMm/view?usp=drive_link" class="button">View Game Story</a></li>
-                        <li><a href="landing5.html" class="button">Previous Project</a></li>
-                        <li><a href="landing.html" class="button">Next Project</a></li>
+                        <li><a href="landing5.html" class="button">Next Project</a></li>
                     </ul>
                     <hr>
                 </div>
             </div>
         </div>
 
-        <!-- Scripts
-                <script src="assets/js/jquery.min.js"></script>
-                <script src="assets/js/jquery.scrolly.min.js"></script>
-                <script src="assets/js/jquery.scrollex.min.js"></script>
-                <script src="assets/js/browser.min.js"></script>
-                <script src="assets/js/breakpoints.min.js"></script>
-                <script src="assets/js/util.js"></script>
-                <script src="assets/js/main.js"></script>
-
-        </body>
+            <script src="js/carousel.js"></script>
+            <script src="js/analytics-events.js"></script>
+</body>
         </html>
