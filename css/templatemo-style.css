@@ -1053,14 +1053,29 @@ h4.widget-title { font-weight: 700; }
 .banner-overlay {
     background: transparent !important;
 }
-.welcome-text h2 { color: #ffffff; }
-.welcome-text h5 { color: #e7edf2; }
-.welcome-text .paragraph-style { color: #e7edf2 !important; }
+.welcome-text h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.22;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+.welcome-text h5 { color: #e7edf2; font-size: 15px; }
+.welcome-text .paragraph-style {
+    color: #e7edf2 !important;
+    font-size: 15px;
+    line-height: 1.7;
+}
 /* keep the bolded keywords readable on the dark banner */
 .welcome-text .kw { color: #ffffff; }
 .welcome-text .kw-metric { color: #6fdcf0; }
 /* italic tagline in cyan */
-.welcome-text h5 > p:first-child { color: #6fdcf0 !important; }
+.welcome-text h5 > p:first-child { color: #6fdcf0 !important; font-size: 14px; }
+
+/* responsive sizing for the banner heading */
+@media (max-width: 768px) { .welcome-text h2 { font-size: 25px; } }
+@media (max-width: 480px) { .welcome-text h2 { font-size: 21px; } }
 .welcome-text .button {
     background: var(--pf-accent);
     color: #fff;
@@ -1267,7 +1282,6 @@ html, body { max-width: 100%; overflow-x: hidden; }
 }
 @media (max-width: 560px) {
     .banner-bg { padding: 70px 22px; }
-    .welcome-text h2 { font-size: 28px; }
 }
 
 /*=========================================================
