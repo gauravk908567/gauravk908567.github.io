@@ -23,7 +23,32 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css?v=6">
+    <link rel="stylesheet" href="css/templatemo-style.css?v=7">
+    <style>
+        /* Planet of Twins page — scoped media styling */
+        .content-wrapper video { max-width: 100%; height: auto; background: #000; }
+        .pot-feature-video {
+            width: 100%; max-width: 840px; display: block;
+            border-radius: 8px; margin: 20px 0;
+        }
+        .pot-duo {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 10px;
+        }
+        .pot-duo video { width: 100%; border-radius: 8px; }
+        .pot-ability-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px; margin: 24px 0 10px;
+        }
+        .pot-ability {
+            background: #fff; border: 1px solid #dce3e7; border-radius: 10px;
+            overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+        }
+        .pot-ability video { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+        .pot-ability .cap { padding: 10px 14px 12px; }
+        .pot-ability .cap b { color: #0aa3c2; font-size: 15px; display: block; }
+        .pot-ability .cap span { color: #3a3f47; font-size: 13px; display: block; margin-top: 3px; line-height: 1.45; }
+        @media (max-width: 700px) { .pot-duo { grid-template-columns: 1fr; } }
+    </style>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -103,11 +128,11 @@
                                     </div>
                                     <div class="prod-item">
                                         <span class="prod-label">Team</span>
-                                        <span class="prod-value">Two people</span>
+                                        <span class="prod-value">Solo, scaling with funding</span>
                                     </div>
                                     <div class="prod-item">
                                         <span class="prod-label">Status</span>
-                                        <span class="prod-value"><span class="status-pill status-dev">In Active Development</span></span>
+                                        <span class="prod-value"><span class="status-pill status-dev">Playable Prototype &middot; 2 Playtests</span></span>
                                     </div>
                                     <div class="prod-item">
                                         <span class="prod-label">Platform</span>
@@ -115,18 +140,21 @@
                                     </div>
                                     <div class="prod-item">
                                         <span class="prod-label">Engine</span>
-                                        <span class="prod-value">Unity 6 · URP · C#</span>
+                                        <span class="prod-value">Unity 6.3 &middot; URP &middot; C#</span>
                                     </div>
                                     <div class="prod-item">
                                         <span class="prod-label">Timeline</span>
-                                        <span class="prod-value">Oct 2023 &ndash; Present</span>
+                                        <span class="prod-value">January 2026 &ndash; Present</span>
                                     </div>
                                 </div>
                             </div>
 
                             <span style="font-size:18px;">
                                 <p>
-                                    Planet of Twins is an original single-player action-adventure game, inspired by Binary Land on the NES. You control two twins at once, Kai and Lyra, and they have to stay close to survive. The further apart they drift, the faster their shared health drains. Every system in the game is built around that one bond.
+                                    Planet of Twins is an original single-player action-adventure game set in a stylized East-Asian fantasy world, inspired by Binary Land on the NES. You control two twins at once, Kai and Lyra, and they share a single life. The further apart they drift, the faster their shared health drains, so closeness is survival and separation is death. Every system in the game is built around that one bond.
+                                </p>
+                                <p>
+                                    In feel it sits somewhere between Brothers: A Tale of Two Sons and It Takes Two, with the combat of a character-action game. It is at indie-AA scale: a systems-complete vertical slice built across more than 23 cross-wired systems, now entering the content phase.
                                 </p>
                                 <p>
                                     This is the project where every part of my background meets. I own the roadmap, run the sprints, do the playtesting, and track the KPIs end to end. I also build it: the systems below are ones I designed and wrote myself. I am the producer, the developer, and the player who cares about whether the game actually feels right.
@@ -137,11 +165,10 @@
                             <div class="pf-carousel" data-autoplay="4500" aria-label="Planet of Twins screenshots">
                                 <div class="pf-viewport">
                                     <div class="pf-track">
-                                        <div class="pf-slide"><img src="img/pot_sky.png" alt="Planet of Twins world"></div>
-                                        <div class="pf-slide"><img src="img/pot_lvl.png" alt="Planet of Twins level"></div>
-                                        <div class="pf-slide"><img src="img/pot_cmpr.png" alt="Planet of Twins comparison"></div>
-                                        <div class="pf-slide"><img src="img/pot_nfg.png" alt="Planet of Twins scene"></div>
-                                        <div class="pf-slide"><img src="img/pot_fr.png" alt="Planet of Twins scene"></div>
+                                        <div class="pf-slide"><img src="video/PLANETOFTWINS/potenv2.jpg" alt="Planet of Twins torii garden"></div>
+                                        <div class="pf-slide"><img src="video/PLANETOFTWINS/potenv3.jpg" alt="Planet of Twins world at dusk"></div>
+                                        <div class="pf-slide"><img src="video/PLANETOFTWINS/potenv1.jpg" alt="Planet of Twins sakura world"></div>
+                                        <div class="pf-slide"><img src="video/PLANETOFTWINS/potenv4.jpg" alt="Planet of Twins pagodas and lanterns"></div>
                                     </div>
                                 </div>
                                 <button class="pf-prev" aria-label="Previous">&lsaquo;</button>
@@ -149,10 +176,27 @@
                             </div>
 
                             <p style="font-size:18px; margin-top:10px;">A look at the game in motion:</p>
-                            <video width="440" height="280" controls muted>
-                                <source src="video/pot_gameplay.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <!-- Gameplay video carousel (heavy clips: load on demand) -->
+                            <div class="pf-carousel" aria-label="Planet of Twins gameplay">
+                                <div class="pf-viewport">
+                                    <div class="pf-track">
+                                        <div class="pf-slide">
+                                            <video controls muted playsinline preload="none" poster="video/PLANETOFTWINS/potenv3.jpg">
+                                                <source src="video/PLANETOFTWINS/gameplay1.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="pf-slide">
+                                            <video controls muted playsinline preload="none" poster="video/PLANETOFTWINS/potenv1.jpg">
+                                                <source src="video/PLANETOFTWINS/gameplay2.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="pf-prev" aria-label="Previous">&lsaquo;</button>
+                                <button class="pf-next" aria-label="Next">&rsaquo;</button>
+                            </div>
                             <hr>
                         </div>
                     </div>
@@ -166,7 +210,9 @@
                             <div style="font-size:18px; margin-bottom:40px;">
                                 <li><b>Full production ownership:</b> I define the scope, build the roadmap, plan every sprint, break down the tasks, and track milestones across the project.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <li><b>Playtest-driven iteration:</b> I ran a structured <b>13-player playtest</b>, collected behavioural and qualitative data on player flow, ability comprehension, and pacing, identified <b>4 critical friction points</b>, and designed a targeted fix for each before committing development time.</li>
+                                <li><b>Playtest-driven iteration:</b> I ran a structured <b>13-player playtest</b>, collected behavioural and qualitative data on player flow, ability comprehension, and pacing, identified <b>4 critical friction points</b>, and designed a targeted fix for each before committing development time. Two playtest rounds are behind the current build.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <li><b>Engineering discipline:</b> one consistent cross-scene rulebook, interface-typed dependency injection, data-driven tuning in ScriptableObjects, one effects path, one time-scale arbiter, and pooled spawns. The systems layer is kept clean so the content phase does not turn into a bug farm.</li>
                                 <div style="margin-bottom: 20px;"></div>
                                 <li><b>Business case:</b> I built a formal Business Case and investment pitch covering the unique mechanics, market positioning, MSP, and a roadmap toward a funded vertical slice.</li>
                             </div>
@@ -182,12 +228,20 @@
                             <h4 class="widget-title">The Core: One Player, Two Twins</h4>
                             <span style="font-size:18px;">
                                 <span class="sys-tag">System I built</span>
-                                <li><b>Dual-character control:</b> The player moves both twins together and switches which one is active for abilities. I built the input layer, the selection system, and the mirrored-movement handling so two characters read as one connected unit.</li>
+                                <li><b>Dual-character control:</b> One player moves both twins together, Kai on the dark-energy side and Lyra on the soul-light side, and switches which one is selected for abilities while the other mirrors the movement. I built the input layer, the selection system, and the mirrored-movement handling so two characters read as one connected unit.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <li><b>Proximity-based shared health:</b> Both twins draw from a single health pool, and the distance between them drains it on a tuned curve. This is the tension the whole game runs on, so I built the distance calculation, the drain zones, and the upgrade-aware modifiers from the ground up.</li>
+                                <li><b>Proximity-based shared health:</b> Both twins draw from a single health pool, and the distance between them drains it on a tuned curve, full when close and gone when far apart. This is the tension the whole game runs on, so I built the distance calculation, the drain zones, and the upgrade-aware modifiers from the ground up.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <video width="640" height="360" controls muted style="margin-bottom:20px; margin-top:20px;">
-                                    <source src="video/pot_movemnt.mp4" type="video/mp4">
+                                <div class="pot-duo">
+                                    <video autoplay loop muted playsinline preload="metadata" aria-label="Selecting a twin">
+                                        <source src="video/PLANETOFTWINS/selectTwin.mp4" type="video/mp4">
+                                    </video>
+                                    <video autoplay loop muted playsinline preload="metadata" aria-label="Moving both twins">
+                                        <source src="video/PLANETOFTWINS/movement.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <video class="pot-feature-video" controls muted playsinline preload="none" poster="video/PLANETOFTWINS/potenv2.jpg" aria-label="Shared health and the bond">
+                                    <source src="video/PLANETOFTWINS/sharedhealth.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </span>
@@ -203,11 +257,11 @@
                             <h4 class="widget-title">Enemy AI: A Hybrid Brain Per Enemy</h4>
                             <span style="font-size:18px;">
                                 <span class="sys-tag">System I designed and wrote</span>
-                                <li><b>GOAP + Behaviour Tree + FSM:</b> Each enemy type runs its own brain. A goal-oriented planner sits on top and decides what to do, then hands execution down to a behaviour tree or state machine. This is the system I am proudest of, and it is the clearest proof of how I think about problems.</li>
+                                <li><b>GOAP + Behaviour Tree + FSM:</b> Each enemy archetype runs its own brain. A goal-oriented planner sits on top and decides what to do, then hands execution down to a behaviour tree or state machine over a shared blackboard. This is the system I am proudest of, and it is the clearest proof of how I think about problems.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <li><b>An emergent enemy ecology:</b> On top of the per-enemy brains I built shared systems for mood, social bonds between enemies, points of interest, and a faction-energy resource. Enemies even fight <i>each other</i> through a clan-war behaviour when no twin is nearby.</li>
+                                <li><b>An emergent enemy ecology:</b> On top of the per-enemy brains I built shared systems for mood, social bonds between enemies, points of interest, perception memory, and a faction-energy resource. Enemies even fight <i>each other</i> through a clan-war behaviour when no twin is nearby. Every archetype is designed to attack a different facet of the bond, dragging the twins apart, linking their health against them, or hunting the rescuing soul.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <li><b>Built on a reusable framework:</b> The decision systems share a blackboard and a service locator, so the AI is decoupled and reusable rather than hard-wired to this one game.</li>
+                                <li><b>Built on a reusable framework:</b> The decision systems share a blackboard and a service locator, so the AI is decoupled and reusable rather than hard-wired to this one game. New enemies are data plus a brain, not new plumbing.</li>
                             </span>
                             <hr>
                         </div>
@@ -220,67 +274,112 @@
                         <div class="col-md-12">
                             <h4 class="widget-title">Story, World &amp; Cinematics</h4>
                             <span style="font-size:18px;">
-                                <li><b>The premise:</b> The twins are torn apart when the villain inverts an ancient curse. Where it once bound twins together, the planet now pulls them apart, and the corrupted people around them become the enemies. The twins fight their way back to restore the bond. Defeated enemies were once neighbours, so their freed souls power the twins, and the kills are framed as grief rather than triumph.</li>
+                                <li><b>The premise:</b> The twins are torn apart when the villain inverts an ancient curse. Where it once bound twins together, the planet now pulls them apart, and the corrupted people around them become the enemies. The world is built warm, alive, and beautiful precisely so its corruption reads as grief. Defeated enemies were once neighbours, so their freed souls power the twins, and the kills are framed as loss rather than triumph.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <li><b>I wrote the narrative and built the cinematics</b> using Unity's Cinemachine across the key story beats, including an intro sequence that teaches the twin relationship through an in-world catastrophe instead of a tutorial prompt.</li>
+                                <li><b>I wrote the narrative and built the cinematics</b> using Unity's Cinemachine across the key story beats, including an intro sequence that teaches the twin relationship through an in-world catastrophe instead of a tutorial prompt. The mechanics and the story grew from the same idea, so playing the game is the story.</li>
                                 <div style="margin-bottom: 20px;"></div>
-                                <!-- Story / world video carousel -->
-                                <div class="pf-carousel" aria-label="Story and world videos">
-                                    <div class="pf-viewport">
-                                        <div class="pf-track">
-                                            <div class="pf-slide">
-                                                <video controls muted>
-                                                    <source src="video/pot_introscene.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                            </div>
-                                            <div class="pf-slide">
-                                                <video controls muted>
-                                                    <source src="video/pot_level.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                            </div>
-                                            <div class="pf-slide">
-                                                <video controls muted>
-                                                    <source src="video/pot_leveloverview.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="pf-prev" aria-label="Previous">&lsaquo;</button>
-                                    <button class="pf-next" aria-label="Next">&rsaquo;</button>
-                                </div>
+                                <video class="pot-feature-video" controls muted playsinline preload="none" poster="video/PLANETOFTWINS/potenv1.jpg" aria-label="Planet of Twins cutscene">
+                                    <source src="video/PLANETOFTWINS/Cutscene1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </span>
+                            <hr>
                         </div>
                     </div>
                 </div>
+
+                <!-- Abilities & powers showcase -->
+                <div class="page-section" id="powers">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Abilities &amp; Powers</h4>
+                            <span style="font-size:18px;">
+                                <span class="sys-tag">Systems I built</span>
+                                <li>The twins grow through <b>nine data-driven skill trees</b>, and each clan brings its own powers that feed both combat and puzzle-solving. Every ability below is a system I designed, wired, and tuned. A shared effects engine drives the visuals so one call plays the particle, the VFX-graph effect, and the sound together.</li>
+                            </span>
+                            <div class="pot-ability-grid">
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/melee.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Melee</b><span>Close-range attack dispatched to whichever twin is selected.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/stun.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Stun</b><span>Crowd control to lock a target down and buy space.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/Possess.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Possession</b><span>Turn a corrupted enemy's own power against the fight.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/Empower.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Empower</b><span>A buff that strengthens the twins mid-encounter.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/AccordState.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Accord State</b><span>Both clan powers channelled together, the twins' shared-power state.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/setsunaconvergence.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Setsuna</b><span>A global slow-motion and rewind time system, separate from soul-mode freeze.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/AccordSpirits.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Accord Spirits</b><span>Freed spirits rally to fight alongside the twins.</span></div>
+                                </div>
+                                <div class="pot-ability">
+                                    <video autoplay loop muted playsinline preload="none">
+                                        <source src="video/PLANETOFTWINS/SoulConvergence.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="cap"><b>Soul Convergence</b><span>The freed souls of the fallen city channel their power into the twins and fight back through them. It takes their sacrifice to activate.</span></div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rescue tension -->
                 <div class="page-section" id="abilities">
                     <div class="row">
                         <div class="col-md-12">
-                            <hr>
-                            <div style="margin-bottom: 40px;"></div>
-                            <h4 class="widget-title">Abilities &amp; Rescue Tension</h4>
-                            <div style="margin-bottom: 40px;"></div>
+                            <div style="margin-bottom: 20px;"></div>
+                            <h4 class="widget-title">The Rescue: Weaver's Gate</h4>
+                            <div style="margin-bottom: 20px;"></div>
                             <div style="font-size:18px; margin-bottom:40px;">
                                 <span class="sys-tag">System I built</span>
-                                <li><b>Weaver's Gate, the rescue ability:</b> When one twin is downed or trapped, the player has to save them before a countdown runs out. The free twin opens a gate and a soul crosses to the dying twin, and the player mashes to complete the rescue against the clock. I built the whole rescue state machine, the soul travel, and the failure conditions. It is the moment the proximity bond pays off under real pressure.</li>
-                                <div style="margin-bottom: 40px;"></div>
-                                <video width="640" height="360" controls muted style="margin-bottom:40px; margin-top:20px;">
-                                    <source src="video/pot_ghost.mp4" type="video/mp4">
+                                <li><b>Weaver's Gate, the rescue ability:</b> When one twin falls, the other's soul tears free from its body, crosses the planet's crack, and fights to bring them back before a countdown runs out. I built the whole rescue state machine, the soul travel, and the failure conditions. It is the moment the proximity bond pays off under real pressure, and it is the emotional centrepiece of the game.</li>
+                                <div style="margin-bottom: 20px;"></div>
+                                <video class="pot-feature-video" controls muted playsinline preload="none" poster="video/PLANETOFTWINS/potenv3.jpg" aria-label="Weaver's Gate rescue in gameplay">
+                                    <source src="video/PLANETOFTWINS/rescuegameplay.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <li><b>Character progression:</b> Both twins gain abilities through a skill tree as the player progresses, which feed into both puzzle-solving and combat. The unlocks, the points, and the upgrade-aware tuning all run through systems I wrote.</li>
+                                <li><b>Character progression:</b> Both twins gain abilities through the skill trees as the player progresses, which feed into both puzzle-solving and combat. The unlocks, the point bank, and the upgrade-aware tuning all run through systems I wrote.</li>
                                 <hr />
                                 <header class="inner">
-                                    <h4 style="margin-top: 40px;"><span style="font-size: 24px;">Production Artefacts</span></h4>
+                                    <h4 style="margin-top: 40px;"><span style="font-size: 24px;">In Active Development: Toward a Vertical Slice</span></h4>
                                 </header>
                                 <div style="margin-top: 40px; margin-bottom:40px;">
-                                    <li>Planet of Twins is built as a fundable product, not just a demo. Below are the development plan, roadmap, and a look ahead at planned expansions, the kind of artefacts a producer is judged on.</li>
+                                    <li>Planet of Twins is a systems-complete prototype now entering the content phase, built as a fundable product rather than a demo. The development plan, roadmap, and expansion artefacts are being refreshed to match the current build, and will be published here as the game moves toward a funded vertical slice.</li>
                                     <div style="margin-bottom: 40px;"></div>
+                                    <!-- Production artefact images temporarily hidden pending update to match current build:
                                     <img src="img/POTDevPlan.png" alt="Development plan" class="proj-image">
-                                    <img src="img/POTRoadmap.png" alt="Roadmap" class="proj-image">
+                                    <img src="img/POTRoadMap.png" alt="Roadmap" class="proj-image">
                                     <img src="img/POTFuture.png" alt="Planned expansions" class="proj-image">
+                                    -->
                                 </div>
                             </div>
                             <hr />

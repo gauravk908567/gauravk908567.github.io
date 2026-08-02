@@ -8,6 +8,31 @@ Each entry includes: date, what changed, which file(s), and the git commit hash 
 
 ---
 
+## [2026-07-31] — Planet of Twins page overhaul with fresh media
+
+**Changes:**
+- Replaced the project-list thumbnail on `index.html` (`img/pot1.png` → `video/PLANETOFTWINS/potenv3.jpg`) and refreshed the hover copy (East-Asian setting, Kai/Lyra named).
+- Full rebuild of `landing1.html` using the new asset pack in `video/PLANETOFTWINS/`:
+  - **Hero carousel** now uses the four new screenshots (potenv3/1/2/4).
+  - **"Game in motion"** is a 2-video carousel (gameplay1, gameplay2), `preload="none"` so heavy clips load on demand.
+  - **Core mechanic** section gets selectTwin + movement (autoplay-loop, muted) and a shared-health feature video.
+  - **Story** section features the real cutscene (Cutscene1.mp4).
+  - **NEW "Abilities & Powers"** grid: Melee, Stun, Possession, Empower, Accord State, Setsuna, Accord Spirits, Soul Convergence (autoplay-loop cards).
+  - **Rescue (Weaver's Gate)** now uses rescuegameplay.mp4.
+  - Copy refreshed from the game's `PROJECT_STATE.md`: East-Asian fantasy setting, Kai/Lyra, "Brothers meets It Takes Two", indie-AA vertical slice, 23+ systems, nine skill trees, engine bumped to Unity 6.3, status "Playable Prototype · 2 Playtests".
+  - Added a scoped `<style>` block for the ability grid / video sizing; bumped stylesheet cache to `?v=7`.
+- **Bug fix:** corrected `img/POTRoadmap.png` → `img/POTRoadMap.png` (case mismatch that 404s on GitHub Pages / Linux).
+- Ability-card captions for Possession/Empower/Accord Spirits/Soul Convergence are best-effort inferences — verify against actual mechanics.
+
+**Follow-up tweaks (same day):**
+- Project **timeline corrected to January 2026 – Present** (current POT is a new project; the 2023–24 version was different). NOTE: this now differs from the CV entry "Independent Game Producer | June 2025 – Present" — reconcile if needed.
+- Project **thumbnail changed potenv3 → potenv2** (index.html), and potenv2 is now the **first** hero-carousel slide.
+- **Soul Convergence** switched from click-to-play to autoplay-loop like the other ability cards.
+- **Production Artefacts** section renamed to **"In Active Development: Toward a Vertical Slice"**; the 3 artefact PNGs (DevPlan/RoadMap/Future) are commented out (kept in markup) pending an update to match the current build.
+- `landing5.html` (Action RPG) intentionally left untouched.
+
+**Note:** New media adds ~151MB. Old POT assets are now orphaned (see cleanup candidates) and can be deleted to offset.
+
 ## [2026-06-23] — Projects restructure (1 hero + supporting) + secondary page copy fixes
 
 **Changes:**
