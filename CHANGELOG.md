@@ -8,12 +8,12 @@ Each entry includes: date, what changed, which file(s), and the git commit hash 
 
 ---
 
-## [2026-08-29] — Founder & Producer reframe (bio + POT positioning)
+## [2026-08-29] — POT reframed as producer-and-developer (bio + positioning)
 
 **Changes:**
-- `index.html` About bio: the Planet of Twins paragraph now reads as **founder and producer** of the game (was "producing... with a two-person team"). Added the East-Asian setting; "two-person team" → building it solo.
-- `index.html` project-card hover: "Team of two" → "Built solo".
-- Context: the game is solo (AI-assisted), in development since Jan 2026; the independent work is framed as a founder role. Resumes + cover letters (in the local `Res/NewCv` folder, outside this repo) were updated in parallel: Founder & Producer, January 2026, solo, indie-AA vertical slice, $610K / 28-month pitch.
+- `index.html` About bio: the Planet of Twins paragraph now reads as **producer and developer** of the game (solo, East-Asian setting, no "two-person team"). Project-card hover: "Team of two" → "Built solo".
+- **Title decision:** dropped "Founder" in favour of the functional title **"Game Producer & Developer"** across resumes, cover letters, and the site. Reason: research shows a real "founder penalty" (fewer callbacks, flight-risk perception); leading with the functional job title reads as "kept building during a gap," not "runs a company." POT stays a personal project, not a company.
+- Resumes + cover letters (local `Res/NewCv`, outside this repo) updated in parallel: Game Producer & Developer, January 2026, solo, indie-AA vertical slice, $610K / 28-month pitch.
 - Also restored this CHANGELOG.md, which had been accidentally overwritten with the game project's changelog.
 
 ## [2026-07-31] — Planet of Twins page overhaul with fresh media
