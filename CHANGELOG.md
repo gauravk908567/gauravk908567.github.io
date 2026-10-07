@@ -33,6 +33,8 @@ The new design (Player Card, Onyx + Gold, star formations), built and reviewed i
 
 **Content rules this version follows:** Planet of Twins shows no bug IDs, bug lists, backlog, code links or funding figures (counts and severity only); project dates are month and year; the 13 slot games shipped in three months and the fish game took six.
 
+**Follow-up (same day):** the two "See the pitch" buttons on `landing1.html` are removed. The linked Google Slides deck, like the old `doc/POT_Pitch.pptx`, asks for funding with a dollar figure, and funding is private. "Read the story" stays. To bring the button back, link a deck without the ask in `build_pages.py`.
+
 **Other:** `.gitignore` keeps `video/newest/`, `video/old/` (raw recordings, some over 100 MB) and `test/` out of git. `CLAUDE.md` page table updated.
 
 ## [2026-08-29] — POT reframed as producer-and-developer (bio + positioning)
