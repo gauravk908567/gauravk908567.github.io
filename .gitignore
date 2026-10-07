@@ -22,3 +22,12 @@ video/newest/
 video/old/
 # the mockup folder from the redesign; pages are built straight into the root now
 test/
+
+# notes stay on this computer, never on GitHub or the site: CLAUDE.md, AGENTS.md, CHANGELOG.md, bugs.md, project notes
+*.md
+# a flowchart made for the fish game at a past employer: company work, kept locally only
+doc/MermaidFlow.pdf
+# the full Lexend download; the site uses only fonts/Lexend/Lexend-latin.woff2
+fonts/Lexend/static/
+fonts/Lexend/*.ttf
+fonts/Lexend/README.txt
