@@ -8,6 +8,33 @@ Each entry includes: date, what changed, which file(s), and the git commit hash 
 
 ---
 
+## [2026-10-07] — The redesign goes live (branch `portfolio-redesign`)
+
+The new design (Player Card, Onyx + Gold, star formations), built and reviewed in `test/` from late September, replaces the old pages. To undo it, check out the commit before this one.
+
+**Pages (all replaced):**
+- `index.html`: player card, record, story, skills, experience (expandable job cards), projects and contact. Hand-written; it is also the single source of the shared style and script.
+- Built by `portfolio-redesign/build_pages.py`, which now writes straight into the root:
+  - `landing1.html` Planet of Twins, `landing5.html` Action RPG, `landing.html` FPP Horror, `landing4.html` Furry Escape (playable through itch.io), `landing3.html` Space Shooting Range, `landing2.html` FPS Multiplayer;
+  - `aboutme.html`, `resume.html` (embeds `doc/resume/GauravKumarResume.pdf`; replace that file to update the resume);
+  - `pc.css` and `pc.js`, cut out of `index.html` on every build.
+- `expgamemano.html` and `expgetmega.html` are now instant forwards to `index.html#experience`, so old links never break.
+- Every page has a canonical link and link-preview tags (`og:`), so LinkedIn and chat apps show a title, text and picture.
+
+**New files:**
+- `sitemap.xml` and `robots.txt` (for Google Search Console).
+- Self-hosted fonts in woff2 (Lexend, Montserrat SemiBold/Bold/ExtraBold, Latin only, about 120 KB): no Google Fonts, so no visitor data goes to a font service.
+- `video/pot/` (web versions of the October 2026 Planet of Twins build, all muted) and `img/pot/` (stills and the trailer poster).
+- Project stills: `img/fpp-*.jpg`, `img/fps-*.jpg`, `img/furry-*.jpg`, `img/ssr-menu.jpg`.
+
+**Media made lighter:** `video/sq1.mp4`, `ar1.mp4`, `Fpp_lvlover.mp4`, `Fpp_lvlovernv.mp4`, `chr.mp4` and `ppgame.mp4` are re-encoded at the same web settings as the Planet of Twins clips (at most 1280 wide, 30 fps, H.264 CRF 27); sound is kept.
+
+**Analytics:** Google Analytics (`G-802G39EQ2E`) and Clarity (`yrfy477nky`) load only on `gauravk908567.github.io` (never from a local file). Visitors in Europe and the UK are asked first; everyone else can opt out through "Cookie settings" in the footer. The events are listed in `portfolio-redesign/ANALYTICS_SETUP.md`.
+
+**Content rules this version follows:** Planet of Twins shows no bug IDs, bug lists, backlog, code links or funding figures (counts and severity only); project dates are month and year; the 13 slot games shipped in three months and the fish game took six.
+
+**Other:** `.gitignore` keeps `video/newest/`, `video/old/` (raw recordings, some over 100 MB) and `test/` out of git. `CLAUDE.md` page table updated.
+
 ## [2026-08-29] — POT reframed as producer-and-developer (bio + positioning)
 
 **Changes:**

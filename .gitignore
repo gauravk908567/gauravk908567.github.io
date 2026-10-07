@@ -16,3 +16,9 @@
 *.json
 *.sqlite
 *.sqlite
+
+# raw Planet of Twins recordings: some are over GitHub's 100 MB limit; only the web versions in video/pot/ go online
+video/newest/
+video/old/
+# the mockup folder from the redesign; pages are built straight into the root now
+test/

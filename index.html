@@ -1,419 +1,740 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<!doctype html>
+<html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-802G39EQ2E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaurav Kumar · Game Producer</title>
+<meta name="description" content="Gaurav Kumar, Game Producer (CAPM). Creating games that connect people and build memories.">
+<link rel="canonical" href="https://gauravk908567.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gauravk908567.github.io/">
+<meta property="og:title" content="Gaurav Kumar · Game Producer">
+<meta property="og:description" content="Gaurav Kumar, Game Producer (CAPM). Creating games that connect people and build memories.">
+<meta property="og:image" content="https://gauravk908567.github.io/img/profile.jpg">
+<style>
+  /* fonts served from the site itself, so no visitor data goes to a font service */
+  /* Latin subsets in woff2, about 120 KB for all four (portfolio-redesign/HANDOFF.md says how they were made) */
+  @font-face{font-family:Lexend;src:url(fonts/Lexend/Lexend-latin.woff2) format("woff2");font-weight:100 900;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/Montserrat-SemiBold-latin.woff2) format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/Montserrat-Bold-latin.woff2) format("woff2");font-weight:700;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/Montserrat-ExtraBold-latin.woff2) format("woff2");font-weight:800;font-display:swap}
+  /* Onyx + Gold. Every colour on the page comes from these tokens. */
+  :root{
+    --bg:#0E0E10; --bg2:#121215; --panel:#17171B; --panel2:#202026; --line:#2C2C34;
+    --ink:#F3F1EC; --muted:#A9A7A0;
+    --acc:#E8B84A; --acc2:#B8892A; --acc-ink:#17130A; --star:#FFE9A8;
+    --card1:#23232A; --card2:#141418; --card-line:#2F2F38;
+    --bar:#B8892A;
+    --pad:clamp(16px,4vw,64px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 Lexend,system-ui,sans-serif}
+  h1,h2,h3,h4{font-family:Montserrat,system-ui,sans-serif;margin:0;line-height:1.15;letter-spacing:-.01em}
+  p{margin:0}
+  ul{list-style:none;margin:0;padding:0}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+  section{padding:clamp(52px,7vw,96px) var(--pad);scroll-margin-top:64px}
+  .alt{background:var(--bg2)}
 
-        gtag('config', 'G-802G39EQ2E');
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gaurav Kumar</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  /* star formations */
+  .st{fill:var(--acc)}
+  .stb{fill:var(--star)}
+  .sl{fill:none;stroke:var(--acc);stroke-opacity:.6;stroke-linecap:round}
+  .o{fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:var(--acc);stroke-width:1.5;stroke-linejoin:round}
+  .n{fill:none;stroke:var(--acc);stroke-opacity:.4;stroke-width:1;stroke-linejoin:round}
+  .tk{fill:none;stroke:var(--acc);stroke-width:1.5;stroke-linecap:round}
+  .mt{font:700 19px Montserrat,sans-serif;fill:var(--acc);text-anchor:middle;dominant-baseline:central}
+  .g{display:inline-block;flex:none;vertical-align:middle}
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/templatemo-style.css?v=6">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  /* shared pieces */
+  .eyebrow{display:flex;align-items:center;gap:10px;font:500 .78rem/1.2 Lexend,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+  .sec-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:10px}
+  .sec-h.solo{margin-bottom:32px}
+  .sec-p{color:var(--muted);max-width:68ch;margin-bottom:32px}
+  .btn{display:inline-block;font:500 .9rem Lexend,sans-serif;text-decoration:none;padding:11px 20px;border-radius:99px;background:var(--acc);color:var(--acc-ink);border:1px solid var(--acc)}
+  .btn:hover{background:var(--star);border-color:var(--star)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn.ghost:hover{border-color:var(--acc);background:transparent}
+  .card{border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+  .pts li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:8px 0}
+  .pts b{font-weight:500}
+  .pts span{color:var(--muted)}
+
+  /* top bar */
+  .top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:20px;padding:8px var(--pad);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .chip{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .chip b{display:block;font:700 .95rem/1.1 Montserrat,sans-serif}
+  .chip span span{font-size:.76rem;color:var(--muted)}
+  .top nav{margin-left:auto;display:flex;gap:22px}
+  .top nav a{font-size:.88rem;text-decoration:none;color:var(--muted)}
+  .top nav a:hover{color:var(--ink)}
+  .top .btn{padding:9px 16px}
+
+  /* hero */
+  .hero{position:relative;display:grid;grid-template-columns:minmax(280px,370px) 1fr;gap:clamp(24px,5vw,80px);align-items:center;min-height:calc(100vh - 62px);padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(28px,4vw,56px);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(700px 500px at 18% 45%,color-mix(in srgb,var(--acc) 9%,transparent),transparent 70%),linear-gradient(90deg,color-mix(in srgb,var(--bg) 88%,transparent),color-mix(in srgb,var(--bg) 97%,transparent)),url(video/PLANETOFTWINS/potenv1.jpg) center/cover}
+  .start{margin-bottom:10px;line-height:0}
+  .hero h1{font-size:clamp(2rem,4.3vw,3.7rem);font-weight:800;margin-bottom:14px}
+  .hero .tag{font-style:italic;color:var(--ink);margin-bottom:16px}
+  .hero .lede{font-size:1.05rem;color:var(--muted);max-width:62ch;margin-bottom:28px}
+  .cta{display:flex;flex-wrap:wrap;gap:10px}
+
+  /* the player card */
+  .pc{border-radius:22px;padding:1px;background:linear-gradient(160deg,var(--acc),color-mix(in srgb,var(--acc) 18%,transparent) 42%,var(--card-line));box-shadow:0 24px 60px rgba(0,0,0,.55)}
+  .pc-in{border-radius:21px;overflow:hidden;background:linear-gradient(180deg,var(--card1),var(--card2))}
+  .pc-photo{position:relative;aspect-ratio:1/.78}
+  .pc-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+  .pc-photo::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(180deg,transparent,var(--card1))}
+  .lv{position:absolute;z-index:1;top:12px;left:12px;font:500 .64rem/1 Lexend,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 9px;border-radius:99px;background:rgba(10,10,12,.62);color:var(--ink);border:1px solid rgba(255,255,255,.18)}
+  .pc-id{position:relative;margin-top:-40px;padding:0 18px 14px}
+  .ttl{display:inline-block;font:500 .62rem/1 Lexend,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);border:1px solid color-mix(in srgb,var(--acc) 55%,transparent);border-radius:99px;padding:5px 9px;margin-bottom:8px;background:rgba(10,10,12,.55)}
+  .pc-id h2{display:flex;align-items:center;gap:10px;font-size:1.6rem;font-weight:700}
+  .pc-id p{font-size:.8rem;color:var(--muted);margin-top:2px}
+  .cap{font:500 .6rem/1 Lexend,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:12px 18px 0;border-top:1px solid var(--card-line)}
+  .tree{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:12px 8px 16px}
+  .tree::before{content:"";position:absolute;left:16.6%;right:16.6%;top:43px;height:1.5px;background:var(--acc);opacity:.55}
+  .tree li{position:relative;text-align:center}
+  .tree svg{display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}
+  .tree .o{fill:#1B1B20}
+  .tree b{display:block;font:500 .74rem/1.25 Lexend,sans-serif}
+  .tree small{display:block;font-size:.64rem;line-height:1.3;color:var(--muted);margin-top:2px}
+  .trk{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--card-line)}
+  .trk li{padding:12px 6px 16px;text-align:center;border-left:1px solid var(--card-line)}
+  .trk li:first-child{border-left:0}
+  .trk b{display:block;font:700 1.2rem/1.2 Montserrat,sans-serif}
+  .trk span{display:block;font-size:.64rem;line-height:1.35;color:var(--muted);margin-top:3px}
+
+  /* achievements */
+  .ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:16px}
+  .ach{position:relative;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;padding:18px 20px 18px 24px}
+  .ach::before{content:"";position:absolute;left:9px;top:16px;bottom:16px;width:3px;border-radius:3px;background:var(--acc)}
+  .ach .big{font:700 1.5rem/1.1 Montserrat,sans-serif;color:var(--acc)}
+  .ach h3{font-size:1rem;font-weight:600;margin:3px 0 2px}
+  .ach p{font-size:.86rem;color:var(--muted)}
+
+  /* story */
+  .story{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:16px}
+  .story li{padding:20px}
+  .story h3{display:flex;align-items:center;gap:12px;font-size:1.02rem;font-weight:600;margin-bottom:8px}
+  .story p{font-size:.95rem;color:var(--muted)}
+  .more-link{display:inline-block;margin-top:22px;color:var(--acc);font-size:.92rem;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--acc) 50%,transparent)}
+
+  /* skills */
+  .branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+  .branch{padding:20px}
+  .branch header{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+  .branch header svg{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 35%,transparent))}
+  .branch .o{fill:#1B1B20}
+  .branch h3{font-size:1.1rem;font-weight:600}
+  .branch .belief{font-style:italic;font-size:.95rem;color:var(--ink);margin:0 0 12px}
+  .branch li{position:relative;padding:9px 0 9px 20px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+  .branch li::before{content:"";position:absolute;left:4px;top:17px;width:7px;height:7px;border-radius:50%;background:var(--acc)}
+  .branch li b{display:block;font-weight:500;color:var(--ink)}
+
+  /* experience: three points first, everything on demand */
+  .jobs{display:grid;gap:18px;max-width:1100px}
+  .xp{padding:clamp(18px,2.4vw,28px)}
+  .xp header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-bottom:12px}
+  .xp header h3{font-size:1.3rem;font-weight:700}
+  .xp header p{color:var(--muted);font-size:.9rem}
+  .xp header i{margin-left:auto;font:500 .68rem/1 Lexend,sans-serif;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);border:1px solid color-mix(in srgb,var(--acc) 55%,transparent);border-radius:99px;padding:6px 10px}
+  details.more{margin-top:8px;border-top:1px solid var(--line);padding-top:14px}
+  details.more summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font:500 .88rem Lexend,sans-serif;padding:9px 16px;border:1px solid var(--line);border-radius:99px}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary:hover{border-color:var(--acc)}
+  details.more summary u{text-decoration:none;font-size:.72rem;color:var(--acc-ink);background:var(--acc);border-radius:99px;padding:2px 8px}
+  details.more .when-open,details.more[open] .when-shut{display:none}
+  details.more[open] .when-open{display:inline}
+  .grp{margin-top:18px}
+  .grp h4{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:600;margin-bottom:2px}
+  .grp .pts li{padding:6px 0;font-size:.94rem;color:var(--muted)}
+
+  /* projects */
+  .show{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+  .proj{position:relative;grid-column:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:230px;padding:20px;border-radius:18px;overflow:hidden;text-decoration:none;color:#F3F1EC;background:var(--panel2) center/cover;border:1px solid var(--line)}
+  .proj::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.1),rgba(10,10,12,.93) 74%)}
+  .proj:hover{border-color:var(--acc)}
+  .proj>*{position:relative}
+  .proj.feat{grid-column:span 4;grid-row:span 2;min-height:476px}
+  .proj .pill{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font:500 .66rem/1 Lexend,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:1px solid color-mix(in srgb,var(--acc) 55%,transparent);background:rgba(10,10,12,.6);border-radius:99px;padding:5px 10px;margin-bottom:10px}
+  .proj h3{font-size:1.25rem;font-weight:700;margin-bottom:4px}
+  .proj.feat h3{font-size:2rem}
+  .proj p{font-size:.86rem;color:#C9C6BD;max-width:60ch}
+  .mini{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px}
+  .mini li{font-size:.74rem;color:#C9C6BD}
+  .mini b{display:block;font:700 1.2rem/1.1 Montserrat,sans-serif;color:#F3F1EC}
+  .gc{grid-column:1/-1;display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:clamp(18px,3vw,48px);align-items:center;padding:22px 24px}
+  .gc h3{font-size:1.25rem;font-weight:700;margin-bottom:6px}
+  .gc .sub{font-size:.9rem;color:var(--muted)}
+  .sky{position:relative;display:grid;grid-template-columns:repeat(7,1fr)}
+  .links{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+  .links polyline{fill:none;stroke:var(--acc);stroke-opacity:.45;stroke-width:.75}
+  .col{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:8px 0 6px;border-radius:10px;font-size:.72rem;line-height:1.25;color:var(--muted);text-align:center}
+  .col:hover,.col:focus{background:color-mix(in srgb,var(--ink) 6%,transparent);outline:none}
+  .col b{font:700 .95rem/1 Montserrat,sans-serif;color:var(--ink)}
+  .plot{position:relative;width:100%;height:190px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+  .pt{position:absolute;left:50%;bottom:calc(var(--v) * (100% - 52px) + 6px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
+  .pt svg{display:block;filter:drop-shadow(0 0 6px var(--acc))}
+  .lab{min-height:3.75em}
+
+  /* contact */
+  .party{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:clamp(20px,3vw,34px);border-radius:22px;border:1px solid color-mix(in srgb,var(--acc) 50%,var(--line));background:radial-gradient(500px 240px at 12% 50%,color-mix(in srgb,var(--acc) 10%,transparent),transparent 70%),var(--panel)}
+  .party h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;margin-bottom:6px}
+  .party p{color:var(--muted);max-width:56ch}
+  .who{display:flex;align-items:center;gap:16px}
+
+  footer{padding:22px var(--pad) 40px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+  footer button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+  #consent{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:18px;flex-wrap:wrap;width:min(760px,calc(100% - 32px));padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:var(--panel2);box-shadow:0 16px 40px rgba(0,0,0,.6);font-size:.9rem}
+  #consent[hidden]{display:none}
+  #consent p{flex:1 1 300px;color:var(--ink)}
+  #consent .btn{font-family:inherit;cursor:pointer;padding:9px 18px}
+
+  #tip{position:fixed;z-index:60;pointer-events:none;background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:8px;font-size:.78rem;line-height:1.3;max-width:260px;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+  #tip b{display:block;font:700 1rem/1.2 Montserrat,sans-serif}
+
+  @media (max-width:1100px){
+    .proj{grid-column:span 3}
+    .proj.feat{grid-column:span 6;grid-row:auto;min-height:380px}
+  }
+  @media (max-width:860px){
+    .top nav{display:none}
+    .top .btn{margin-left:auto}
+    .hero{grid-template-columns:1fr;min-height:0}
+    .pc{max-width:370px;margin:0 auto;width:100%}
+    .proj{grid-column:span 6}
+    .gc{grid-template-columns:1fr}
+    .sky{grid-template-columns:1fr;gap:0}
+    .col{flex-direction:row;justify-content:flex-start;gap:8px;padding:6px 4px;text-align:left}
+    .plot{flex:1;height:26px;margin:0;border-bottom:0;border-left:1px solid var(--line)}
+    .pt{left:calc(var(--v) * (100% - 56px) + 6px);bottom:auto;top:50%;transform:translateY(-50%);flex-direction:row-reverse;gap:6px}
+    .lab{order:-1;flex:none;width:96px;min-height:0}
+  }
+</style>
 </head>
 <body>
-    <div class="responsive-header visible-xs visible-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="top-section">
-                        <div class="profile-image">
-                            <img src="img/profile.jpg" alt="Gaurav Kumar">
-                        </div>
-                        <div class="profile-content">
-                            <h3 class="profile-title">Gaurav Kumar</h3>
-                            <p class="profile-description">| CAPM | Game Production | Program Manager | Project Manager |</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
-            <div class="main-navigation responsive-menu">
-                <ul class="navigation">
-                    <li><a href="#top"><i class="fa fa-ghost"></i>About Me</a></li>
-                    <li><a href="#skills"><i class="fa fa-user"></i>Skills</a></li>
-                    <li><a href="#experience"><i class="fa fa-user"></i>Experience</a></li>
-                    <li><a href="#projects"><i class="fa fa-newspaper-o"></i>Projects</a></li>
-                    <li><a href="#certificates"><i class="fa fa-user"></i>Certificates</a></li>
-                    <li><a href="#contact"><i class="fa fa-envelope"></i>Contact Me</a></li>
-                </ul>
-            </div>
-        </div>
+
+<header class="top">
+  <a class="chip" href="#top" data-track="nav_click" data-item="home">
+    <span data-g="ashwini" data-s="26"></span>
+    <span id="mark-top"></span>
+    <span><b>Gaurav Kumar</b><span>Game Producer</span></span>
+  </a>
+  <nav>
+    <a href="#proof" data-track="nav_click" data-item="achievements">Achievements</a>
+    <a href="#story" data-track="nav_click" data-item="story">Story</a>
+    <a href="#skills" data-track="nav_click" data-item="skills">Skills</a>
+    <a href="#experience" data-track="nav_click" data-item="experience">Experience</a>
+    <a href="#projects" data-track="nav_click" data-item="projects">Projects</a>
+  </nav>
+  <a class="btn" href="#contact" data-track="cta_click" data-item="contact" data-place="top_bar">Contact</a>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-section="hero">
+  <article class="pc" aria-label="Player card">
+    <div class="pc-in">
+      <div class="pc-photo"><span class="lv">Making games since 2020</span><img src="img/profile.jpg" alt="Gaurav Kumar"></div>
+      <div class="pc-id">
+        <span class="ttl">Game Producer · CAPM</span>
+        <h2><span id="mark-card"></span>Gaurav Kumar</h2>
+        <p>Product ownership · Project management · Game design</p>
+      </div>
+      <p class="cap">Core skills</p>
+      <ul class="tree" id="tree"></ul>
+      <ul class="trk">
+        <li><b>43</b><span>people led</span></li>
+        <li><b>23+</b><span>systems built for Planet of Twins</span></li>
+        <li><b>6</b><span>disciplines in one team</span></li>
+      </ul>
     </div>
+  </article>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar-menu hidden-xs hidden-sm">
-        <div class="top-section">
-            <div class="profile-image">
-                <img src="img/profile.jpg" alt="Gaurav Kumar">
-            </div>
-            <h3 class="profile-title">Gaurav Kumar</h3>
-            <p class="profile-description">| CAPM | Game Production | Program Manager | Project Manager |</p>
-        </div> <!-- top-section -->
-        <div class="main-navigation">
-            <ul class="navigation">
-                <li><a href="#top"><i class="fa fa-bolt"></i>About Me</a></li>
-                <li><a href="#skills"><i class="fa fa-star"></i>Skills</a></li>
-                <li><a href="#experience"><i class="fa fa-briefcase"></i>Experience</a></li>
-                <li><a href="#projects"><i class="fa fa-gamepad"></i>Projects</a></li>
-                <li><a href="#certificates"><i class="fa fa-trophy"></i>Certificates</a></li>
-                <li><a href="#contact"><i class="fa fa-link"></i>Contact Me</a></li>
-            </ul>
-        </div> <!-- .main-navigation -->
-        <div class="social-icons">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/gaurav-kumar-20492818b/"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/gauravk908567?tab=repositories"><i class="fa fa-github"></i></a></li>
-            </ul>
-        </div> <!-- .social-icons -->
-    </div> <!-- .sidebar-menu -->
-
-
-    <div class="banner-bg" id="top">
-        <div class="banner-overlay"></div>
-        <div class="welcome-text">
-            <h2>Creating Games That Connect People & Build Memories</h2>
-            <h5>
-                <p class="paragraph-style" style="font-style: italic; letter-spacing: 1px;">Owning the Strategy. Leading the People. Shipping the Vision.</p>
-                <p class="paragraph-style">There was always someone who had to sit out and wait. I noticed that when I was very young, could not stop thinking about it, and have been doing something about it ever since. Every game I have worked on and every team I have led comes back to that same thing: pull everyone in together and make something worth remembering.</p>
-
-                <p class="paragraph-style">I spent five years building in Unity before stepping into production full time, working across level design, systems, shaders, narrative, and full pipeline work. That background matters: when I am running a sprint I know what the developer across from me is actually dealing with. At Gamemano I built the production pipeline from nothing, led a 43-person cross-functional team across developers, artists, game mathematicians, QA, legal, and external sound vendors, and shipped 13 game titles across PC, WebGL, and mobile in three months. I have always led from the same place. Football team captain in school, in-game leader for my Counter-Strike squad, captain of a mixed-rank Valorant team (Bronze to Gold players) that placed 64th in the APAC qualifiers, now producing games. The same instincts that make a good team captain make a good producer.</p>
-
-                <p class="paragraph-style">Right now I am the producer and developer of Planet of Twins, my own original PC action-adventure game set in a stylized East-Asian fantasy world, built around two twins who have to stay together to survive. It is where every part of my background meets. I own the roadmap, run the sprints, do the playtesting, and build the game myself. I am the producer, the developer, and the player who cares about whether the game actually feels right.</p>
-
-                <p class="paragraph-style">I hold my CAPM from PMI and am working toward PMP. Game Producer, Product Owner, Project Manager, Game Designer. What I have learned makes a project actually ship comes down to three things: <span class="kw">leadership</span>, <span class="kw">open communication</span>, and <span class="kw">problem solving</span>. The last one is wired into how I think, and you can see it in the systems I build.</p>
-                <p class="paragraph-style">When I am not working I am playing Valorant, Rust, or Schedule 1 with friends, or somewhere on a football pitch. The full story is on the About Me page.</p>
-                <div style="margin-bottom: 24px;"></div>
-            </h5>
-            <ul class="actions">
-                <li><a href="aboutme.html" class="button">My Story</a></li>
-            </ul>
-        </div>
+  <div>
+    <p class="start"><span data-g="ashwini" data-s="34"></span></p>
+    <h1>Creating games that connect people and build memories</h1>
+    <p class="tag">The memories that stay are made in the games we play.</p>
+    <p class="lede">Mine were made with family and friends around one screen, and I want the whole world to have that feeling. So I make games people play together, and I run teams the same way: I own the strategy, lead the people and ship the vision.</p>
+    <div class="cta">
+      <a class="btn" href="resume.html" data-track="cta_click" data-item="resume" data-place="hero">View resume</a>
+      <a class="btn ghost" href="#projects" data-track="cta_click" data-item="projects" data-place="hero">See the games</a>
+      <a class="btn ghost" href="#contact" data-track="cta_click" data-item="contact" data-place="hero">Contact</a>
     </div>
+  </div>
+</section>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-        <div class="fluid-container">
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="proof" class="alt" data-section="achievements">
+  <p class="eyebrow">Achievements</p>
+  <h2 class="sec-h solo">The record so far</h2>
+  <div class="ach-grid" id="ach"></div>
+</section>
 
-            <div class="content-wrapper">
+<!-- ============ STORY ============ -->
+<section id="story" data-section="story">
+  <p class="eyebrow">My story</p>
+  <h2 class="sec-h solo">From one screen to a game of my own</h2>
+  <ul class="story" id="storylist"></ul>
+  <a class="more-link" href="aboutme.html" data-track="cta_click" data-item="full_story" data-place="story">Read the full story</a>
+</section>
 
-                <!-- ABOUT -->
-                <!--<div class="page-section" id="about">
-                <div class="row">
-                    <div class="col-md-12">
-                          <h2>Gaurav Kumar | CAPM | Scrum Master | Game Producer | Game Director</h2>
-                        <div class="about-image">
-                            <img src="img/8.jpg" alt="about me">
-                        </div>
-                        <p>
-                            Gaurav Kumar is a dedicated management professional with a passion for the gaming industry, hailing from the vibrant city of Varanasi, Uttar Pradesh, India. From an early age, Gaurav was captivated by the world of video games, often gathering his family for spirited gaming sessions. His childhood desire for collaborative play sparked a lifelong interest in game development, especially after he sought ways to enhance multiplayer experiences in games like Bomberman.
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="alt" data-section="skills">
+  <p class="eyebrow">Skills</p>
+  <h2 class="sec-h">How I work</h2>
+  <p class="sec-p">I believe every project that ships stands on three things: leadership that listens, problems fixed at the root, and communication that leaves no one guessing. Under all three is the craft of building games with my own hands.</p>
+  <div class="branches" id="branches"></div>
+</section>
 
-                            As he progressed through school, Gaurav's curiosity led him to explore the intricacies of game design, eventually learning 6502 assembly and creating custom maps for Counter-Strike 1.6 to hone his team's skills. During college, he developed several 2D and 3D projects and published a game on the Google Play Store. His professional journey took a significant turn when he joined GetMega as a game tester, where he rigorously tested real-money gaming applications, identifying bugs and monitoring gameplay for integrity.
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" data-section="experience">
+  <p class="eyebrow">Experience</p>
+  <h2 class="sec-h">The journey so far</h2>
+  <p class="sec-p">Game tester on a live platform in 2021. Game producer for two years, leading 43 people through 24 releases. Now producing and building a game of my own.</p>
+  <div class="jobs" id="jobs"></div>
+</section>
 
-                            Gaurav's commitment to learning and growth continued as he advanced to Gamemano, a startup specializing in casino games. His rapid ascent from Unity game developer to development team lead and then to scrum master reflects his ability to foster effective agile teams and streamline project collaboration. Recently earning his CAPM certification from PMI, Gaurav is now focused on achieving his PMP certification while learning from industry leaders.
-
-                            With a strong foundation in project management and a relentless drive to innovate within the gaming sector, Gaurav Kumar is poised to make a lasting impact, merging his passion for gaming with strategic management to create experiences that bring people together.
-                            <a rel="nofollow" href="http://unsplash.com" target="_parent">Unsplash</a> for images used in this design. You can <strong>change menu icons</strong> by checking <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/" target="_parent">Font Awesome</a> (version 4). Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong>
-                        </p>
-                        <hr>
-                    </div>
-                </div>-->
-                <!-- #about -->
-                <!--</div>-->
-                <!-- Skills -->
-                <div class="page-section" id="skills">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Skills</h4>
-                            <div class="skills-container">
-                                <div class="image-container tip-tag" data-tip-key="Agile / Scrum" data-tip="Ran sprints, backlog, and retrospectives for a 43-person team at Gamemano, building the agile process from scratch." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Agile Project Management
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Leadership" data-tip="Led a 43-person cross-functional team across developers, artists, game mathematicians, QA, and external vendors." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Servant Leadership
-                                    </div>
-                                </div>   <div class="image-container tip-tag" data-tip-key="Open Communication" data-tip="Built the internal communication pipeline that cut cross-team collaboration errors by 80%." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Effective Communication and mediation
-                                    </div>
-                                </div>   <div class="image-container tip-tag" data-tip-key="Cross-functional" data-tip="Coordinated developers, artists, mathematicians, QA, legal, and sound vendors to ship 13 titles in three months." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Leading Cross-Functional teams
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Systems Thinking" data-tip="Designed a hybrid GOAP + Behaviour Tree + FSM enemy AI framework with one brain per enemy type in Planet of Twins." data-tip-where="Proven in: Projects — Planet of Twins">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Critical and Analytical thinking
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Change Management" data-tip="Moved Gamemano from ad-hoc work to a structured agile pipeline, raising delivery speed by ~90%." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Change Management
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Problem Solving" data-tip="Used metrics to find bottlenecks and rebalance resources, delivering 13 slot games and a fish game on a 3-month timeline." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Problem solving and process improvement
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Tooling" data-tip="Managed roadmaps, sprints, and backlogs in Jira and Azure DevOps day to day." data-tip-where="Proven in: Experience — Gamemano">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Jira and Azure DevOps
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Domain Knowledge" data-tip="Shipped across free-to-play and pay-to-play monetization models in real-money and casino gaming." data-tip-where="Proven in: Experience — Gamemano & GetMega">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Familiarity with F2P and P2P
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Unity" data-tip="Five years building in Unity across level design, systems, shaders, and full pipeline work." data-tip-where="Proven in: Projects — Planet of Twins & more">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Unity Engine
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="C#" data-tip="Wrote the gameplay systems for Planet of Twins, from the shared-health bond to the AI brains, in C#." data-tip-where="Proven in: Projects — Planet of Twins">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        Familiar with C#
-                                    </div>
-                                </div>
-                                <div class="image-container tip-tag" data-tip-key="Version Control" data-tip="Used SourceTree and GitHub to manage source and coordinate work across the team." data-tip-where="Proven in: Experience & Projects">
-                                    <img src="img/8.jpg" alt="skill" class="skill-image">
-                                    <div class="text-overlay">
-                                        SourceTree and GitHub
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                    </div> <!-- #skills -->
-                </div>
-
-                <!-- Work Experience -->
-                <div class="page-section" id="experience">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Experience</h4>
-                            <div>
-                                <span style="font-size: 24px; font-weight: bold;">Game Producer <!--<a href="expgamemano.html" class="link" style="font-size: 16px; font-style:italic; margin-left: 480px;">(More Details Here)</a>--></span>
-                                <span style="display: block; font-size: 16px; font-style: italic;"><a href="https://www.linkedin.com/company/gamemano/" style="color:#0aa3c2; text-decoration:underline;">Gamemano</a>, India (June 2023 - June 2025)</span>
-                                <p>
-                                    <span style="font-size: 16px;">
-                                        <li style="margin-bottom: 24px;"> Led <span class="kw">cross-functional teams of 43+ professionals</span> using agile project management in an early-stage gaming startup. Worked with C-suite leadership on strategic planning and ran competitive analysis of the games market to inform product strategy and feature prioritization.<span class="skill-chip" data-tip-key="Cross-functional Leadership" data-tip="Coordinated developers, artists, mathematicians, QA, legal, and external vendors as one team, and partnered with C-suite on strategy.">Cross-functional Leadership</span></li>
-                                        <li style="margin-bottom: 24px;"> Established the <span class="kw">game development pipeline from scratch</span>, increasing game delivery speed by <span class="kw-metric">~90%</span> and reducing cross-team collaboration errors by <span class="kw-metric">80%</span>. The internal development and communication pipeline improved team efficiency by <span class="kw-metric">45%</span> and enabled seamless onboarding for new developers in a scaling startup.<span class="skill-chip" data-tip-key="Pipeline & Process" data-tip="Turned an ad-hoc studio into a structured pipeline, the single biggest lever on speed, quality, and onboarding.">Pipeline & Process</span></li>
-                                        <li style="margin-bottom: 24px;"> Built all systems from the ground up while <span class="kw">creating and managing game product roadmaps</span> through strategic planning of the development process.<span class="skill-chip" data-tip-key="Product Roadmap" data-tip="Owned the roadmap end to end: what gets built, in what order, and why, the core of the Product Owner role.">Product Roadmap</span></li>
-                                        <li style="margin-bottom: 24px;"> Applied <span class="kw">data-driven problem solving</span>, using metrics to identify bottlenecks and allocate resources. Delivered <span class="kw-metric">13 slot games</span>, <span class="kw-metric">10 re-skinning projects</span>, and a casino fish game within a <span class="kw-metric">3-month</span> timeline across PC, WebGL, and Android/iOS, while defining user stories and acceptance criteria for clear development guidelines.<span class="skill-chip" data-tip-key="Data-Driven Delivery" data-tip="Used real metrics, not gut feel, to find bottlenecks and hit an aggressive multi-platform delivery target.">Data-Driven Delivery</span></li>
-                                        <li style="margin-bottom: 24px;"> Led recruitment, onboarding, and mentorship through technical project leadership and clear task assignment. Facilitated <span class="kw">backlog management and sprint retrospectives</span>, and organized learning initiatives through hyper-casual game projects that grew the team's collaborative problem-solving.<span class="skill-chip" data-tip-key="Sprint & Backlog" data-tip="Ran the agile ceremonies and grew the team's capability through hands-on learning projects.">Sprint &amp; Backlog</span></li>
-                                        <li style="margin-bottom: 24px;"> Oversaw <span class="kw">parallel development streams</span> for slot and fish game architectures, applying strategic vision for risk mitigation and resource balancing. Contributed as game and level designer creating Unity layouts, ran gameplay testing sessions, and analyzed gameplay data to drive iterative improvements aligned with gaming compliance guidelines.<span class="skill-chip" data-tip-key="Risk & Design" data-tip="Balanced two concurrent product lines against risk, and stepped into game/level design directly when needed.">Risk &amp; Design</span></li>
-                                    </span>
-                                </p>
-                            </div>
-                            <div style="margin-top:80px;">
-                                <span style="font-size: 24px; font-weight: bold;">Game Tester <!--<a href="expgetmega.html" class="link" style="font-size: 16px; font-style:italic; margin-left: 512px;">(More Details Here)</a>--></span>
-                                <span style="display: block; font-size: 16px; font-style: italic;"><a href="https://www.linkedin.com/company/getmega/" style="color:#0aa3c2; text-decoration:underline;">GetMega</a>, India (Feb 2021 - Apr 2021)</span>
-                                <p>
-                                    <span style="font-size: 16px;">
-                                        <li style="margin-bottom: 24px;"> Accelerated platform stabilization for a stealth-mode gaming startup during a critical <span class="kw-metric">100% DAU</span> growth period. Implemented systematic <span class="kw">QA processes</span> that improved D1 retention from <span class="kw-metric">26% to 34%</span> and reduced crash rates by <span class="kw-metric">15%</span>, supporting Series A funding preparation.<span class="skill-chip" data-tip-key="QA & Stability" data-tip="Built the QA process that moved the core retention and crash numbers a startup is judged on before a funding round.">QA &amp; Stability</span></li>
-                                        <li style="margin-bottom: 24px;"> Optimized user acquisition through <span class="kw">analytics-driven testing</span> during the startup's public launch, contributing to a <span class="kw-metric">30%+</span> improvement in D7 retention (8% to 12%) and supporting influencer campaigns that grew the user base from <span class="kw-metric">6.5M to 13.5M</span> registered users.<span class="skill-chip" data-tip-key="Data-Driven Decisions" data-tip="Turned test and analytics findings into retention and acquisition gains at real scale.">Data-Driven Decisions</span></li>
-                                        <li style="margin-bottom: 24px;"> Monitored traffic and identified peak hours to inform strategies for player engagement during off-peak times. Behavioral analysis of user interaction patterns delivered actionable insights that informed product optimization and contributed to D30 retention improving from <span class="kw-metric">3% to 5%</span> during rapid scaling.<span class="skill-chip" data-tip-key="Player Insights" data-tip="Read player behaviour patterns and converted them into product decisions that lifted long-term retention.">Player Insights</span></li>
-                                        <li style="margin-bottom: 24px;"> Strengthened platform integrity through <span class="kw">fraud detection and behaviour monitoring</span>, including detecting and banning six players using unfair methods. Maintained a <span class="kw-metric">99.9%</span> legitimate user ratio while supporting commission-based revenue optimization that achieved <span class="kw-metric">15%+</span> transaction volume growth.<span class="skill-chip" data-tip-key="Integrity & Problem Solving" data-tip="Protected a real-money platform's fairness and revenue through hands-on fraud detection.">Integrity &amp; Problem Solving</span></li>
-                                        <li style="margin-bottom: 24px;"> Accelerated product-market fit validation by identifying and <span class="kw">prioritizing critical UX issues</span> across resource optimization, matchmaking algorithms, and gameplay stability, reducing user churn by <span class="kw-metric">20%</span> and supporting investor-readiness metrics for Series A.<span class="skill-chip" data-tip-key="Prioritization" data-tip="Triaged the issues that mattered most to retention and investor confidence, a core product judgment call.">Prioritization</span></li>
-                                        <li style="margin-bottom: 24px;"> Supported a scalable <span class="kw">QA framework</span> that took the real-money platform from beta to production-ready, enabling a public launch with <span class="kw-metric">200+ influencer partnerships</span> and positioning the company for a Series A round worth <span class="kw-metric">$9M+</span> within 3 months.<span class="skill-chip" data-tip-key="Live Ops Readiness" data-tip="Helped a product cross the hardest line, beta to production, under the scrutiny of a funding round.">Live Ops Readiness</span></li>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                        <hr />
-                    </div> <!-- #work -->
-                </div>
-
-                <!-- PROJECTS -->
-                <div class="page-section" id="projects">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Projects</h4>
-                            <h5 style="font-size:24px;"><a href="landing1.html" class="link">Planet of Twins</a></h5>
-                            <div class="project-item">
-                                <img src="video/PLANETOFTWINS/potenv2.jpg" alt="Planet of Twins" class="img-fluid">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="landing1.html" class="link">Planet of Twins</a></h5>
-                                        <p>My flagship project, an original PC action-adventure game set in a stylized East-Asian fantasy world, in active development. You control two twins at once, Kai and Lyra, who must stay close to survive, since the distance between them drains their shared health. I produce it and build it: dual-character control, proximity health, a Weaver's Gate rescue ability, and a hybrid GOAP and behaviour-tree enemy AI are all systems I designed and wrote myself. Built solo, inspired by Binary Land on the NES.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <h5 style="font-size:24px;"><a href="landing5.html" class="link">Action RPG</a></h5>
-                            <div class="project-item">
-                                <img src="img/rpgss.png" alt="" class="img-fluid">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="landing5.html" class="link">Action RPG</a></h5>
-                                        <p>An Action RPG for PC where the player is the last survivor of a village corrupted by an evil king and must recover the four fragments of an ancient sword. I worked as producer, project manager, level designer, and shader artist, and built it alongside two collaborators (a sound designer and a C# programmer). It is where I practised running the full end-to-end production lifecycle with a small team.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <h5 style="font-size:24px;"><a href="landing.html" class="link">FPP Horror</a></h5>
-                            <div class="project-item">
-                                <img src="img/pic01.png" alt="" class="img-fluid">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="landing.html" class="link">FPP Horror</a></h5>
-                                        <p>A short first-person survival horror game built solo, end to end, inspired by titles like Outlast. I wanted to create genuine suspense from minimal systems, with an environment that reacts to the player and a narrative that pulls them naturally toward the next beat. I handled the AI, level design, optimization, audio, and the lighting-driven pacing myself.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="other-work">
-                                <div class="ow-label">Other Work</div>
-                                <div class="ow-item">
-                                    <span class="ow-name"><a href="landing4.html" class="link">Furry Escape</a></span><span class="ow-status status-pill status-shipped">Shipped</span> &mdash; my first published game. A 2D hyper-casual platformer I built solo (mechanics, UI, UX, and art) and shipped on <a href="https://gauravk908567.itch.io/furry-escape" class="link">Itch.io</a> and the Google Play Store.
-                                </div>
-                                <div class="ow-item">
-                                    <span class="ow-name"><a href="landing3.html" class="link">Space Shooting Range</a></span> &mdash; a 2D side-scrolling shooter inspired by NES-era classics, with hand-made game art built in Illustrator and Photoshop.
-                                </div>
-                                <div class="ow-item">
-                                    <span class="ow-name"><a href="landing2.html" class="link">FPS Multiplayer</a></span> &mdash; a multiplayer FPS prototype built to go deep on real-time networking with Photon: room creation, matchmaking, and core combat.
-                                </div>
-                            </div>
-                        </div>
-                        <hr />
-                    </div>
-                </div>
-
-                <!-- Certificates -->
-                <div class="page-section" id="certificates">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Certificates</h4>
-                        </div>
-                        <div class="skills-section">
-                            <div class="skills-container">
-                                <div class="certificate-item">
-                                    <img src="img/pmi.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.credly.com/badges/fa8a5ed6-213d-4c87-bc79-ff957da0f018/linked_in_profile" style="color: royalblue;">
-                                        CAPM - Certified Associate in Project Management
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/fb0b59c5c778354a88f78b24b8dd87eefa24a9eea88262b48f32928e5ca2bdf4" style="color: royalblue;">
-                                        Getting Started as an Agile Project Manager
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/e2477f390c6c8a4c6c95b9d5624df1e8cdbf9253a45ec88452ee820d5cf734f7" style="color: royalblue;">
-                                        Getting Started as a Project Manager
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/689bb2248c685c7ab9c87059a7c9f192ea45b8fbcab7a00dfae9e8b84bb2cb9e" style="color: royalblue;">
-                                        Project Management Simplified
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/4038fe2eada5d6dcea36ba1f6dc7637f8cddbaac8f49ea433ef695d69307b70e" style="color: royalblue;">
-                                        Project Management Skills for Leaders
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/7ebd69e719d9cdbe7150b7a835ab27896ff5b1eb820a9151a5765616c4bc54c1" style="color: royalblue;">
-                                        Agile Development Practices
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/98ff10058bdace1c6c0688ec6af10198901c8d3f48588f865ede1a37891f41f4" style="color: royalblue;">
-                                        Agile Software Development: Refactoring
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/c197420c5d1cab8bef0865271a2110dd9c5710841f41bcb7c5c139e9e65dfc09" style="color: royalblue;">
-                                        Jira: Basic Administration (2020)
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/b0df4a87660877c0e187e21dbeceadfc14e16c086757ed9b5fe19c09b3537542" style="color: royalblue;">
-                                        Game Design Foundations: 1 Ideas, Core Loops, and Goals
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/33b6210e4cdbf04b9bb24e9148944278640e8866a61ef6f9302aafdc9bd4abad" style="color: royalblue;">
-                                        Game Design Foundations: 2 Systems, Chance, and Strategy
-                                    </a>
-                                </div>
-                                <div class="certificate-item">
-                                    <img src="img/linkedin.jpg" alt="Logo" class="certificate-logo">
-                                    <a href="https://www.linkedin.com/learning/certificates/ea29d328f2abadf7373339ec1022612c4b791aaf38c6bdd94f7cf0bd4c38dbd5" style="color: royalblue;">
-                                        2D Game Design and Development Essential Training
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div> <!-- #certificates  -->
-                <!-- CONTACT -->
-                <div class="page-section" id="contact">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">Connect With Me</h4>
-                            <ul class="actions">
-                                <li><a href="https://www.linkedin.com/in/gaurav-kumar-20492818b/" class="button">LinkedIn</a></li>
-                                <li><a href="mailto:gauravk908567@gmail.com" class="button">Email - gauravk908567@gmail.com</a></li>
-                                <li><a href="resume.html" class="button">View My Resume</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="alt" data-section="projects">
+  <p class="eyebrow">Projects</p>
+  <h2 class="sec-h">One in the making, five already made</h2>
+  <p class="sec-p">Planet of Twins is my original IP, in development now. The other five are where I learned to build it.</p>
+  <div class="show">
+    <a class="proj feat" href="landing1.html" style="background-image:url(video/PLANETOFTWINS/potenv2.jpg)" data-track="project_click" data-item="planet_of_twins">
+      <span class="pill"><span data-g="punarvasu" data-s="18"></span>Original IP · In development</span>
+      <h3>Planet of Twins</h3>
+      <p>My own co-op action-adventure for PC, with a single-player mode too. Two twins share one life, and the distance between them drains it. I produce it and I build it.</p>
+      <ul class="mini"><li><b>23+</b>connected systems</li><li><b>13</b>players in a structured playtest</li><li><b>8</b>languages</li></ul>
+    </a>
+    <a class="proj" href="landing5.html" style="background-image:url(img/rpgss.png)" data-track="project_click" data-item="action_rpg">
+      <span class="pill">Team of three</span><h3>Action RPG</h3>
+      <p>I ran a team of three, set the look and built the world: the camera, the environment and the shaders.</p>
+    </a>
+    <a class="proj" href="landing.html" style="background-image:url(img/pic01.png)" data-track="project_click" data-item="fpp_horror">
+      <span class="pill">Solo</span><h3>FPP Horror</h3>
+      <p>A short first-person survival horror game, built end to end: AI, level design, audio and lighting-driven pacing.</p>
+    </a>
+    <a class="proj" href="landing4.html" style="background-image:url(img/pic02.png)" data-track="project_click" data-item="furry_escape">
+      <span class="pill">Shipped</span><h3>Furry Escape</h3>
+      <p>My first published game. A 2D hyper-casual platformer you can play in the browser.</p>
+    </a>
+    <a class="proj" href="landing3.html" style="background-image:url(img/pic011.png)" data-track="project_click" data-item="space_shooting_range">
+      <span class="pill">Solo</span><h3>Space Shooting Range</h3>
+      <p>A 2D side-scrolling shooter in the spirit of the NES era, with hand-made art.</p>
+    </a>
+    <a class="proj" href="landing2.html" data-track="project_click" data-item="fps_multiplayer">
+      <span class="pill">Prototype</span><h3>FPS Multiplayer</h3>
+      <p>Built to go deep on real-time networking with Photon: rooms, matchmaking and core combat.</p>
+    </a>
+    <div class="card gc">
+      <div>
+        <h3>30 projects by type</h3>
+        <p class="sub">Studio releases and my own projects together.</p>
+      </div>
+      <div class="sky" id="types"></div>
     </div>
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/min/plugins.min.js"></script>
-    <script src="js/min/main.min.js"></script>
-    <script src="js/tooltips.js"></script>
-    <script src="js/analytics-events.js"></script>
+  </div>
+</section>
 
+<!-- ============ CONTACT ============ -->
+<section id="contact" data-section="contact">
+  <p class="eyebrow"><span data-g="pushya" data-s="26"></span>Contact</p>
+  <div class="party">
+    <div class="who">
+      <span id="mark-contact"></span>
+      <div>
+        <h2>Gaurav Kumar</h2>
+        <p>Game Producer. Based in Varanasi, India, and open to relocating.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="mailto:gauravk908567@gmail.com" data-track="contact_click" data-item="email">Email</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/gaurav-kumar-20492818b/" data-track="contact_click" data-item="linkedin">LinkedIn</a>
+      <a class="btn ghost" href="resume.html" data-track="cta_click" data-item="resume" data-place="contact">Resume</a>
+      <a class="btn ghost" href="https://github.com/gauravk908567?tab=repositories" data-track="contact_click" data-item="github">GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>Gaurav Kumar · Varanasi, India · <button type="button" id="cookie-open">Cookie settings</button></footer>
+
+<div id="consent" role="dialog" aria-label="Cookie notice" hidden>
+  <p>This site uses analytics cookies to see which pages get read. No ads, and nothing is sold or shared.</p>
+  <div class="cta">
+    <button type="button" class="btn" data-consent="granted">Allow</button>
+    <button type="button" class="btn ghost" data-consent="denied">Decline</button>
+  </div>
+</div>
+<div id="tip" hidden><b></b><span></span></div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  function h(tag, cls, parent, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  /* ================= star formations (decoration only; never explained on the page) =================
+     Positions: right ascension in hours, declination in degrees, 1 = the main star.
+     Lines join stars by index. Ardra is one star; Shatabhisha ("the hundred stars") is drawn as a ring. */
+  var F = {
+    ardra:     { name: 'Ardra', single: true },
+    ashwini:   { name: 'Ashwini', s: [[2.120, 23.46, 1], [1.911, 20.81], [1.892, 19.29]], l: [[0, 1], [1, 2]] },
+    magha:     { name: 'Magha', s: [[10.140, 11.97, 1], [10.122, 16.76], [10.333, 19.84], [10.278, 23.42], [9.879, 26.01], [9.764, 23.77]], l: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]] },
+    mula:      { name: 'Mula', s: [[16.836, -34.29], [16.865, -38.05], [16.910, -42.36], [17.203, -43.24], [17.622, -43.00], [17.793, -40.13], [17.708, -39.03], [17.560, -37.10, 1], [17.513, -37.30]], l: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7], [7, 8]] },
+    shravana:  { name: 'Shravana', s: [[19.771, 10.61], [19.846, 8.87, 1], [19.922, 6.41]], l: [[0, 1], [1, 2]] },
+    vishakha:  { name: 'Vishakha', s: [[14.848, -16.04], [15.283, -9.38, 1], [15.592, -14.79], [15.204, -19.79]], l: [[0, 1], [1, 2], [2, 0], [0, 3]] },
+    hasta:     { name: 'Hasta', s: [[12.140, -24.73], [12.169, -22.62], [12.263, -17.54, 1], [12.498, -16.52], [12.573, -23.40]], l: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 1]] },
+    pushya:    { name: 'Pushya', s: [[8.721, 21.47], [8.745, 18.15, 1], [8.526, 18.09]], l: [[0, 1], [1, 2]] },
+    punarvasu: { name: 'Punarvasu', s: [[7.577, 31.89], [7.755, 28.03, 1]], l: [[0, 1]] },
+    revati:    { name: 'Revati', s: [[0.811, 7.59], [1.049, 7.89], [1.229, 7.58, 1], [1.503, 6.14], [1.690, 5.49], [2.034, 2.76]], l: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]] },
+    dhanishta: { name: 'Dhanishta', s: [[20.625, 14.60, 1], [20.660, 15.91], [20.778, 16.12], [20.725, 15.07]], l: [[0, 1], [1, 2], [2, 3], [3, 0]] },
+    pphalguni: { name: 'Purva Phalguni', s: [[11.235, 20.52, 1], [11.237, 15.43]], l: [[0, 1]] },
+    shatabhisha: { name: 'Shatabhisha', ring: true }
+  };
+  var STAR4 = 'M20 6L23.2 16.8 34 20 23.2 23.2 20 34 16.8 23.2 6 20 16.8 16.8Z';
+
+  // shapes for one formation, fitted to a 40 x 40 box; size = the pixel size it will be shown at
+  function shapes(key, size) {
+    var f = F[key], k = 40 / size, i;
+    if (f.single) return '<path class="stb" d="' + STAR4 + '"/>';
+    if (f.ring) {
+      var rr = Math.max(1.1, size * 0.036) * k, ring = '';
+      for (i = 0; i < 14; i++) { var an = i * Math.PI / 7; ring += '<circle class="' + (i ? 'st' : 'stb') + '" cx="' + (20 + 13 * Math.sin(an)).toFixed(1) + '" cy="' + (20 - 13 * Math.cos(an)).toFixed(1) + '" r="' + (i ? rr : rr * 1.7).toFixed(2) + '"/>'; }
+      return ring;
+    }
+    var d0 = f.s.reduce(function (a, p) { return a + p[1]; }, 0) / f.s.length, c = Math.cos(d0 * Math.PI / 180);
+    var pts = f.s.map(function (p) { return [-p[0] * 15 * c, -p[1]]; });   // east is left, north is up, as in the sky
+    var xs = pts.map(function (p) { return p[0]; }), ys = pts.map(function (p) { return p[1]; });
+    var x0 = Math.min.apply(0, xs), x1 = Math.max.apply(0, xs), y0 = Math.min.apply(0, ys), y1 = Math.max.apply(0, ys);
+    var pad = Math.max(5, 3.2 * k), sc = (40 - 2 * pad) / Math.max(x1 - x0, y1 - y0, 0.001);
+    var ox = (40 - (x1 - x0) * sc) / 2, oy = (40 - (y1 - y0) * sc) / 2;
+    var q = pts.map(function (p) { return [(ox + (p[0] - x0) * sc).toFixed(1), (oy + (p[1] - y0) * sc).toFixed(1)]; });
+    var r = Math.max(1.15, size * 0.042) * k, lw = Math.max(0.8, size * 0.022) * k, out = '';
+    f.l.forEach(function (a) { out += '<line class="sl" stroke-width="' + lw.toFixed(2) + '" x1="' + q[a[0]][0] + '" y1="' + q[a[0]][1] + '" x2="' + q[a[1]][0] + '" y2="' + q[a[1]][1] + '"/>'; });
+    f.s.forEach(function (p, j) { out += '<circle class="' + (p[2] ? 'stb' : 'st') + '" cx="' + q[j][0] + '" cy="' + q[j][1] + '" r="' + (p[2] ? r * 1.7 : r).toFixed(2) + '"/>'; });
+    return out;
+  }
+  // every string below is fixed markup built from the table above, never from outside data
+  function glyph(key, size) {
+    return '<svg class="g" viewBox="0 0 40 40" width="' + size + '" height="' + size + '" aria-hidden="true">' + shapes(key, size) + '</svg>';
+  }
+  // skill-tree node with a formation inside
+  function node(key, size) {
+    return '<svg class="g" viewBox="0 0 64 64" width="' + size + '" height="' + size + '" aria-hidden="true"><circle class="o" cx="32" cy="32" r="25"/><circle class="n" cx="32" cy="32" r="20.5"/><path class="tk" d="M32 1v4M32 59v4M1 32h4M59 32h4"/><svg x="15" y="15" width="34" height="34" viewBox="0 0 40 40">' + shapes(key, size * 0.53) + '</svg></svg>';
+  }
+  // the name mark: initials in the Ardra diamond, with the Ardra star on the top point
+  function mark(size) {
+    return '<svg class="g" viewBox="-6 -6 76 76" width="' + size + '" height="' + size + '" aria-hidden="true"><path class="o" d="M32 3L61 32 32 61 3 32Z"/><path class="n" d="M32 10L54 32 32 54 10 32Z"/><circle class="st" cx="61" cy="32" r="2"/><circle class="st" cx="32" cy="61" r="2"/><circle class="st" cx="3" cy="32" r="2"/><path class="stb" d="M32 -5L33.9 1.1 40 3 33.9 4.9 32 11 30.1 4.9 24 3 30.1 1.1Z"/><text class="mt" x="32" y="33">GK</text></svg>';
+  }
+  $('mark-top').innerHTML = mark(42);
+  $('mark-card').innerHTML = mark(34);
+  $('mark-contact').innerHTML = mark(64);
+  document.querySelectorAll('[data-g]').forEach(function (e) { e.innerHTML = glyph(e.dataset.g, +e.dataset.s); });
+
+  function point(ul, key, lead, rest) {
+    var li = h('li', '', ul); li.innerHTML = glyph(key, 28);
+    var p = h('p', '', li); if (lead) h('b', '', p, lead); if (rest) h('span', '', p, (lead ? ' ' : '') + rest);
+  }
+
+  /* ================= content ================= */
+  // card: the three core skills
+  [['magha', 'Leadership', 'Recruiting, onboarding, mentoring'], ['mula', 'Problem solving', 'Delivery speed +90%'], ['shravana', 'Communication', 'Cross-team errors −80%']].forEach(function (s) {
+    var li = h('li', '', $('tree')); li.innerHTML = node(s[0], 62);
+    h('b', '', li, s[1]); h('small', '', li, s[2]);
+  });
+
+  // achievements
+  // the strongest first and last: people remember the ends of a list best
+  [['vishakha', '24 releases', 'Slot games in three months, a fish game in six', '13 slot games shipped in three months, plus 10 reskins. A real-time multiplayer casino fish game, built on Photon Fusion, shipped in six months. PC, WebGL, Android and iOS.'],
+   ['magha', '43 people', 'Led as one team', 'Developers, artists, game mathematicians, QA, legal and external sound vendors, all moving to one plan.'],
+   ['mula', 'About 90% faster', 'Game delivery, with 80% fewer cross-team errors', 'After I built the development and communication pipeline from scratch. Team efficiency rose 45% with it.'],
+   ['pushya', 'CAPM', 'PMI, 2024 to 2027', 'Certified Associate in Project Management, working toward PMP.'],
+   ['dhanishta', '64th', 'APAC qualifiers, Valorant', 'Captain of a mixed-rank team, Bronze to Gold players.'],
+   ['punarvasu', 'Original IP', 'Planet of Twins, my own game', 'A co-op action-adventure I produce and build: 23+ systems, a 13-player playtest and eight languages.']
+  ].forEach(function (a) {
+    var c = h('div', 'card ach', $('ach')); c.innerHTML = glyph(a[0], 40);
+    var d = h('div', '', c); h('p', 'big', d, a[1]); h('h3', '', d, a[2]);
+    h('p', '', d, a[3]);
+  });
+
+  // story: a hero's journey in four beats (the call, the road, the test, the return); the question opened in the first card is answered in the last
+  [['ashwini', 'One screen, the whole family', '', 'Super Contra, Tank and Pooyan, with my whole family around one screen. Those nights made the memories I still carry, and they left me with a question: how could Bomberman fit more of us in? I have been chasing the answer ever since.'],
+   ['shatabhisha', 'Going as deep as I could', '', 'I taught myself 6502 assembly, the code NES games were written in, to see how a game works byte by byte. I built Counter-Strike maps my team trained on, captained my school football team and called the plays as in-game leader. Then I shipped my first game, code and art my own.'],
+   ['revati', 'Stepping up to produce', '', 'I joined a studio as a Unity developer and became its development lead. When the project manager left, I stepped up and ran both projects: 43 people, 24 releases, and a pipeline built from scratch that made delivery about 90% faster.'],
+   ['punarvasu', 'A game of my own', '', 'Now I am building Planet of Twins, a co-op game where two players share one life. It is my answer to the question from that family screen, and the reason I make games at all: so more people get memories like mine.']
+  ].forEach(function (s) {
+    var li = h('li', 'card', $('storylist')), hd = h('h3', '', li);
+    hd.innerHTML = glyph(s[0], 44);
+    h('span', '', hd, s[1]);
+    h('p', '', li, s[3]);
+  });
+
+  // skills: four branches, each led by the belief behind it
+  [['magha', 'Leadership', 'Listen first, then lead.', [
+      ['Servant leadership', 'Sat with every team before building the development pipeline, learned how each one wanted to work, and built one pipeline that served them all.'],
+      ['Cross-functional delivery', 'Led 43 people across development, art, game maths, QA, legal and sound vendors, and shipped 13 slot games in three months.'],
+      ['Agile and Scrum', 'Built the agile process from scratch and ran it every day: sprints, backlog and retrospectives.']]],
+   ['mula', 'Problem solving', 'Fix the root, and the branches follow.', [
+      ['Process improvement', 'Read the delivery numbers, found the bottlenecks, and moved people and time to where they unblocked the most.'],
+      ['Systems thinking', 'Designed the Planet of Twins enemy AI so a planner, a behaviour tree and a state machine share one brain per enemy type. A new enemy is data, not new code.'],
+      ['Change management', 'Took a studio from ad-hoc work to a structured agile pipeline, and delivery became about 90% faster.']]],
+   ['shravana', 'Communication', 'Say it early, say it clearly, and nobody is surprised.', [
+      ['Open communication', 'Built the communication pipeline between teams: cross-team errors fell 80% and team efficiency rose 45%.'],
+      ['Roadmaps and backlogs', 'Ran product roadmaps, sprints and backlogs in Jira and Azure DevOps, with every stream working from the same plan.'],
+      ['Working with leadership', 'Set strategy and product priorities with the C-suite, and turned them into plans the team could deliver.']]],
+   ['hasta', 'Hands-on craft', 'I know the work because I do the work.', [
+      ['Unity and C#', 'Five years building in Unity. I built every gameplay system in Planet of Twins, from the shared-health bond to the enemy AI.'],
+      ['Game and level design', 'Designed levels and Unity layouts for studio titles, and ran the gameplay tests on them.'],
+      ['Real-money and casino games', 'Shipped slot and fish games for free-to-play and pay-to-play, within gaming compliance rules.']]]
+  ].forEach(function (b) {
+    var box = h('div', 'card branch', $('branches')), hd = h('header', '', box);
+    hd.innerHTML = node(b[0], 58);
+    h('h3', '', hd, b[1]);
+    h('p', 'belief', box, b[2]);
+    var ul = h('ul', '', box);
+    b[3].forEach(function (x) { var li = h('li', '', ul); h('b', '', li, x[0]); li.appendChild(document.createTextNode(x[1])); });
+  });
+
+  // experience: three headline points, then every responsibility grouped by theme
+  var JOBS = [
+    { id: 'planet_of_twins', role: 'Game Producer & Developer', org: 'Planet of Twins · Jan 2026 to now · solo', tag: 'Now', link: 'landing1.html', linkText: 'Open the Planet of Twins page',
+      top: [
+        ['hasta', 'Producing and building my own co-op game for PC.', 'I own the roadmap, run the sprints, run the playtests and build the game.'],
+        ['mula', 'Designed and built 23+ connected systems,', 'including an enemy AI that combines planning, behaviour trees and state machines.'],
+        ['shravana', 'Ran a structured playtest with 13 outside players,', 'found four friction points and answered each one. Couch co-op is now built and playtest-ready.']],
+      groups: [
+        ['vishakha', 'Production', [
+          'Own the roadmap and run the sprints for the whole game.',
+          'Ship versioned builds and track every bug from found to verified.',
+          'Wrote a production plan with three milestones: vertical slice, demo and launch.',
+          'Wrote a formal business case and pitch for the game.']],
+        ['mula', 'Systems and problem solving', [
+          'Hybrid enemy AI: a planner, a behaviour tree and a state machine, with one brain per enemy type.',
+          'Enemy ecology on top of the AI: mood, social bonds, faction energy and sites where enemies feed.',
+          'Multi-scene streaming architecture, with a written rulebook for every cross-scene reference.',
+          'Editor tools that enforce the architecture: a validator, auto-wiring and a new-area generator.']],
+        ['hasta', 'Building the game', [
+          'Two twins controlled together, with shared health that drains as they move apart.',
+          'A rescue ability, an Accord State and a slow-motion and rewind time system.',
+          'Nine skill trees, checkpoints, gate puzzles and a tutorial that can teach anywhere.',
+          'Couch co-op for two players, alongside a single-player mode.',
+          'Localisation into eight languages.']],
+        ['shravana', 'Listening to players', [
+          'Ran a structured playtest with 13 outside players and a 21-question form.',
+          'Turned its four friction points into a tutorial, clearer prompts, a readable rescue and a higher camera.',
+          'Couch co-op built and playtest-ready, for a second playtest of solo against co-op.']]] },
+    { id: 'gamemano', role: 'Game Producer', org: 'Gamemano · Jun 2023 to Jun 2025 · Noida', tag: '2 years',
+      top: [
+        ['magha', 'Led a 43-person cross-functional team', 'in an early-stage gaming startup.'],
+        ['vishakha', 'Delivered 24 releases:', '13 slot games in three months, 10 reskins, and a multiplayer casino fish game in six months.'],
+        ['mula', 'Built the development pipeline from scratch,', 'raising delivery speed by about 90% and cutting cross-team errors by 80%.']],
+      groups: [
+        ['magha', 'Leadership', [
+          'Led cross-functional teams of 43+ people with agile project management: developers, artists, game mathematicians, QA, legal and external sound vendors.',
+          'Worked with C-suite leadership on strategic planning.',
+          'Led recruitment, onboarding and mentorship through technical project leadership and clear task assignment.',
+          'Organised learning initiatives through hyper-casual game projects that grew the team’s collaborative problem solving.']],
+        ['vishakha', 'Delivery', [
+          'Delivered 13 slot games within a three-month timeline.',
+          'Delivered 10 reskinning projects.',
+          'Delivered a multiplayer casino fish game, built on Photon Fusion, in six months.',
+          'Shipped across PC, WebGL and Android/iOS.',
+          'Created and managed game product roadmaps through strategic planning of the development process.',
+          'Oversaw parallel development streams for slot and fish game architectures, with risk mitigation and resource balancing.',
+          'Defined user stories and acceptance criteria so development guidelines were clear.',
+          'Facilitated backlog management and sprint retrospectives.']],
+        ['mula', 'Problem solving', [
+          'Established the game development pipeline from scratch, raising game delivery speed by about 90%.',
+          'Used metrics to identify bottlenecks and allocate resources.',
+          'Ran competitive analysis of the games market to inform product strategy and feature prioritisation.',
+          'Analysed gameplay data to drive iterative improvements in line with gaming compliance guidelines.']],
+        ['shravana', 'Communication', [
+          'Built the internal development and communication pipeline that reduced cross-team collaboration errors by 80%.',
+          'The same pipeline improved team efficiency by 45%.',
+          'Made onboarding smooth for new developers in a scaling startup.']],
+        ['hasta', 'Hands-on', [
+          'Contributed as game and level designer, creating Unity layouts.',
+          'Ran gameplay testing sessions.']]] },
+    { id: 'getmega', role: 'Game Tester', org: 'GetMega · Feb 2021 to Apr 2021 · Bengaluru', tag: '3 months',
+      top: [
+        ['hasta', 'Tested a real-money gaming platform', 'through its move from beta to a public launch.'],
+        ['mula', 'Found and reported six players using unfair methods,', 'as part of fraud detection and behaviour monitoring.'],
+        ['shravana', 'Prioritised the critical UX issues', 'across matchmaking, resource use and gameplay stability.']],
+      groups: [
+        ['hasta', 'Testing', [
+          'Tested real-money gaming applications for bugs and gameplay integrity during a period of fast user growth.',
+          'Supported the QA framework that took the platform from beta to production-ready.',
+          'Used analytics-driven testing during the public launch.']],
+        ['mula', 'Problem solving', [
+          'Fraud detection and behaviour monitoring, including detecting six players using unfair methods, who were then banned.',
+          'Identified and prioritised critical UX issues across resource optimisation, matchmaking and gameplay stability.']],
+        ['shravana', 'Player insight', [
+          'Monitored traffic and identified peak hours, to inform engagement plans for off-peak times.',
+          'Analysed how players behaved and passed the findings to the product team.']],
+        ['vishakha', 'What the team achieved in that period', [
+          'D1 retention rose from 26% to 34%, D7 from 8% to 12% and D30 from 3% to 5%.',
+          'Registered users grew from 6.5M to 13.5M, with 200+ influencer partnerships at launch.',
+          'The company went on to raise a Series A of about $9M.']]] }
+  ];
+  JOBS.forEach(function (j) {
+    var a = h('article', 'card xp', $('jobs')), hd = h('header', '', a), d = h('div', '', hd);
+    h('h3', '', d, j.role); h('p', '', d, j.org); h('i', '', hd, j.tag);
+    var top = h('ul', 'pts', a);
+    j.top.forEach(function (p) { point(top, p[0], p[1], p[2]); });
+    var count = j.groups.reduce(function (n, g) { return n + g[2].length; }, 0);
+    var det = h('details', 'more', a), sm = h('summary', '', det);
+    h('span', 'when-shut', sm, 'See everything I did here'); h('span', 'when-open', sm, 'Show less'); h('u', 'when-shut', sm, count + ' points');
+    j.groups.forEach(function (g) {
+      var box = h('div', 'grp', det), gh = h('h4', '', box);
+      gh.innerHTML = glyph(g[0], 30);
+      gh.appendChild(document.createTextNode(g[1]));
+      var ul = h('ul', 'pts', box);
+      g[2].forEach(function (t) { point(ul, g[0], '', t); });
+    });
+    if (j.link) {
+      var lk = h('a', 'more-link', det, j.linkText); lk.href = j.link;
+      lk.addEventListener('click', function () { track('cta_click', { item: 'job_page_' + j.id, place: 'experience' }); });
+    }
+    det.addEventListener('toggle', function () { track(det.open ? 'job_expand' : 'job_collapse', { item: j.id }); });
+  });
+
+  // projects by type
+  var tip = $('tip');
+  function showTip(x, y, val, label) {
+    tip.firstChild.textContent = val; tip.lastChild.textContent = label; tip.hidden = false;
+    var w = tip.offsetWidth, ht = tip.offsetHeight;
+    tip.style.left = Math.max(8, Math.min(x + 14, innerWidth - w - 8)) + 'px';
+    tip.style.top = (y - ht - 12 < 8 ? y + 18 : y - ht - 12) + 'px';
+  }
+  function hideTip() { tip.hidden = true; }
+  var sky = $('types'), NS = 'http://www.w3.org/2000/svg';
+  var links = document.createElementNS(NS, 'svg'), line = document.createElementNS(NS, 'polyline');
+  links.setAttribute('class', 'links'); links.setAttribute('aria-hidden', 'true'); links.appendChild(line); sky.appendChild(links);
+  [['Original slots', 13, '13 original slot titles'],
+   ['Slot reskins', 10, '10 reskins of slot titles'],
+   ['Multiplayer', 2, 'Casino fish game, FPS Multiplayer'],
+   ['Action-adventure and RPG', 2, 'Planet of Twins, Action RPG'],
+   ['Horror', 1, 'FPP Horror'],
+   ['Hyper-casual', 1, 'Furry Escape'],
+   ['2D shooter', 1, 'Space Shooting Range']
+  ].forEach(function (p) {
+    var c = h('div', 'col', sky); c.tabIndex = 0; c.setAttribute('role', 'img');
+    var val = p[1] + (p[1] === 1 ? ' project' : ' projects');
+    c.setAttribute('aria-label', p[0] + ': ' + val + '. ' + p[2]);
+    var pt = h('span', 'pt', h('span', 'plot', c)); pt.style.setProperty('--v', p[1] / 13);
+    h('b', '', pt, p[1]);
+    pt.insertAdjacentHTML('beforeend', '<svg viewBox="0 0 40 40" width="20" height="20" aria-hidden="true"><path class="stb" d="' + STAR4 + '"/></svg>');
+    h('span', 'lab', c, p[0]);
+    c.addEventListener('pointermove', function (e) { showTip(e.clientX, e.clientY, val, p[2]); });
+    c.addEventListener('pointerleave', hideTip);
+    c.addEventListener('focus', function () { var q = c.getBoundingClientRect(); showTip(q.left + q.width / 2, q.top, val, p[2]); });
+    c.addEventListener('blur', hideTip);
+  });
+  // a hairline joins the stars, like a constellation
+  function join() {
+    var o = sky.getBoundingClientRect(), pts = [];
+    sky.querySelectorAll('.pt svg').forEach(function (e) { var q = e.getBoundingClientRect(); pts.push((q.left + q.width / 2 - o.left).toFixed(1) + ',' + (q.top + q.height / 2 - o.top).toFixed(1)); });
+    line.setAttribute('points', pts.join(' '));
+  }
+  join(); addEventListener('resize', join);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(join);
+
+  /* ================= analytics =================
+     The Google tag loads only on the live site, never from the test folder or a local file.
+     Add ?debug to the address to see every event in the browser console. Add ?eu to force the cookie notice. */
+  var GA_ID = 'G-802G39EQ2E';
+  var CLARITY_ID = 'yrfy477nky';  // Microsoft Clarity project id (heatmaps and recordings)
+  var LIVE = location.hostname === 'gauravk908567.github.io' && location.pathname.indexOf('/test/') === -1;
+  var DEBUG = /[?&]debug\b/.test(location.search);
+
+  // Visitors in Europe and the UK must agree before analytics cookies are set. Everyone else can opt out in the footer.
+  var tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+  var NEEDS = /[?&]eu\b/.test(location.search) || /^Europe\//.test(tz) || /^Atlantic\/(Canary|Madeira|Azores|Reykjavik|Faroe)$/.test(tz) || /^Asia\/(Nicosia|Famagusta)$/.test(tz) || tz === 'Africa/Ceuta';
+  var choice = null; try { choice = localStorage.getItem('pc-consent'); } catch (e) {}
+  function allowed() { return choice === 'granted' || (choice === null && !NEEDS); }
+
+  if (LIVE) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'default', { analytics_storage: allowed() ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+    var gs = document.createElement('script'); gs.async = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID; document.head.appendChild(gs);
+  }
+  var clarityOn = false;
+  function clarity() {
+    if (!clarityOn && LIVE && CLARITY_ID && allowed()) {
+      clarityOn = true;
+      (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, 'clarity', 'script', CLARITY_ID);
+    }
+    // pass the visitor's cookie choice on to Clarity (also covers a later Decline from the footer)
+    if (clarityOn && choice !== null) window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: choice });
+  }
+  clarity();
+
+  function track(name, params) {
+    if (DEBUG) console.log('[track]', name, JSON.stringify(params || {}));
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+
+  // cookie notice
+  var box = $('consent');
+  if (NEEDS && choice === null) box.hidden = false;
+  $('cookie-open').addEventListener('click', function () { box.hidden = false; });
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-consent]'); if (!b) return;
+    choice = b.dataset.consent;
+    try { localStorage.setItem('pc-consent', choice); } catch (err) {}
+    if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: choice });
+    box.hidden = true;
+    track('consent_choice', { item: choice });
+    clarity();
+  });
+
+  window.pcTrack = track;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-track]');
+    if (a) track(a.dataset.track, { item: a.dataset.item || '', place: a.dataset.place || '' });
+  });
+  // which sections were seen, and for how long
+  if ('IntersectionObserver' in window) {
+    var seen = {}, since = {}, total = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var s = en.target.dataset.section, now = Date.now();
+        if (en.isIntersecting) {
+          since[s] = now;
+          if (!seen[s]) { seen[s] = 1; track('section_view', { section: s }); }
+        } else if (since[s]) { total[s] = (total[s] || 0) + (now - since[s]); since[s] = 0; }
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('[data-section]').forEach(function (s) { io.observe(s); });
+    var sent = false;
+    function flush() {
+      if (sent) return; sent = true;
+      var now = Date.now();
+      Object.keys(since).forEach(function (s) { if (since[s]) { total[s] = (total[s] || 0) + (now - since[s]); since[s] = 0; } });
+      Object.keys(total).forEach(function (s) {
+        var sec = Math.round(total[s] / 1000);
+        if (sec > 0) track('section_time', { section: s, seconds: sec, transport_type: 'beacon' });
+      });
+    }
+    document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') flush(); else sent = false; });
+    addEventListener('pagehide', flush);
+  }
+})();
+</script>
 </body>
 </html>
